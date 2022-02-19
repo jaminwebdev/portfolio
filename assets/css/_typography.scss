@@ -1,0 +1,74 @@
+/* Typography */
+h1 {
+  font-family: var(--default-heading-font);
+  font-size: 6.5rem;
+  line-height: 1.1em;
+  font-weight: 700;
+  color: var(--primary-font-color);
+
+  @media only screen and (max-width: 56.25rem) {
+    font-size: 4.4rem;
+    line-height: 1.1em;
+  }
+}
+
+h2 {
+  font-family: var(--default-heading-font);
+  font-size: 4.4rem;
+  line-height: 1.3em;
+  font-weight: 600;
+  color: var(--primary-font-color);
+
+  @media only screen and (max-width: 56.25rem) {
+    font-size: 3.4rem;
+  }
+}
+
+h3 {
+  font-family: var(--default-heading-font);
+  font-size: 3rem;
+  line-height: 1.3em;
+  font-weight: 600;
+  color: var(--primary-font-color);
+
+  @media only screen and (max-width: 56.25rem) {
+    font-size: 2.4rem;
+  }
+}
+
+h4 {
+  font-family: var(--default-heading-font);
+  font-size: 2.4rem;
+  line-height: 1.2em;
+  font-weight: 500;
+  color: var(--primary-font-color);
+
+  @media only screen and (max-width: 56.25rem) {
+    font-size: 2rem;
+  }
+}
+
+p,
+a,
+li {
+  font-size: 1.8rem;
+  line-height: 1.6em;
+  font-weight: 400;
+  color: var(--primary-font-color);
+  font-family: var(--default-body-font);
+
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  list-style: disc;
+  list-style-position: inside;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+.textCentered {
+  text-align: center;
+}

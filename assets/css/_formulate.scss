@@ -1,0 +1,41 @@
+.formulate-input[data-classification="text"] input,
+.formulate-input[data-classification="select"] select,
+.formulate-input[data-classification="textarea"] textarea {
+  font-size: 1.8rem !important;
+  padding: 0.75rem 1rem !important;
+}
+
+.formulate-input .formulate-input-element {
+  max-width: none !important;
+}
+
+.formulate-input .formulate-input-error,
+.formulate-input .formulate-input-label,
+.formulate-input .formulate-input-help {
+  font-size: 1.6rem !important;
+}
+
+.formulate-input[data-classification="box"] .formulate-input-element-decorator {
+  width: 2.3rem !important;
+  height: 2.3rem !important;
+
+  &:hover {
+    cursor: pointer !important;
+  }
+}
+
+.formulate-input[data-classification="box"] .formulate-input-element {
+  max-width: auto !important;
+  min-width: 2.5rem !important;
+}
+
+.formulate-input[data-classification="select"]
+  .formulate-input-element::before {
+  border: 0.6em solid transparent !important;
+  border-top-color: #cecece !important;
+  border-bottom-width: 0 !important;
+}
+
+.formulate-input[data-classification="group"] .formulate-input-group-item {
+  margin-bottom: 1rem !important;
+}

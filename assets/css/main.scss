@@ -1,0 +1,77 @@
+@import "./buefy";
+@import "./typography";
+@import "./page-animation";
+@import "./animations";
+@import "~/node_modules/@braid/vue-formulate/themes/snow/snow";
+@import "./formulate";
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  background: var(--primary-page-background);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  /* Default Colors */
+  --primary-color: #3172bc;
+  --primary-color-light: #66adff;
+  --primary-color-medium: #3c7dc9;
+  --primary-color-dark: #0c478c;
+
+  --primary-color-dark-rgb: 12, 71, 140;
+
+  --primary-page-background: #fafaff;
+
+  --primary-font-color: #2f495e;
+
+  /* Breakpoints */
+  --bp-largest: 75em;
+  --bp-large: 68.75em;
+  --bp-medium: 56.25em;
+  --bp-small: 37.5em;
+  --bp-smallest: 31.25em;
+
+  /* Default Full Width Grid */
+  --default-full-layout-grid: [full-start] minmax(2rem, 1fr) [center-start]
+    minmax(0, 1200px) [center-end] minmax(2rem, 1fr) [full-end];
+
+  --default-two-columns-half: [full-start] minmax(3rem, 1fr) [left-start]
+    minmax(0, 600px) [left-end right-start] minmax(0, 600px) [right-end]
+    minmax(3rem, 1fr) [full-end];
+
+  --default-two-columns-two-thirds-left: [full-start] minmax(3rem, 1fr)
+    [left-start] minmax(0, 900px) [left-end right-start] minmax(0, 300px)
+    [right-end] minmax(3rem, 1fr) [full-end];
+
+  --default-two-columns-two-thirds-right: [full-start] minmax(3rem, 1fr)
+    [left-start] minmax(0, 300px) [left-end right-start] minmax(0, 900px)
+    [right-end] minmax(3rem, 1fr) [full-end];
+
+  /* Font Families */
+  --default-heading-font: "Poppins", sans-serif;
+  --default-body-font: "Roboto", sans-serif;
+}
+
+.mainHighlight {
+  color: var(--primary-color);
+}
+
+.desktopVisible {
+  @media only screen and (max-width: 687px) {
+    display: none !important;
+  }
+}
+
+.mobileVisible {
+  @media only screen and (min-width: 687px) {
+    display: none !important;
+  }
+}
