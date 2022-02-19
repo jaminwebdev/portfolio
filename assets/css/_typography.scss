@@ -1,57 +1,57 @@
 /* Typography */
 h1 {
   font-family: var(--default-heading-font);
-  font-size: 6.5rem;
+  font-size: 4rem;
   line-height: 1.1em;
   font-weight: 700;
   color: var(--primary-font-color);
 
   @media only screen and (max-width: 56.25rem) {
-    font-size: 4.4rem;
+    font-size: 2.75rem;
     line-height: 1.1em;
   }
 }
 
 h2 {
   font-family: var(--default-heading-font);
-  font-size: 4.4rem;
+  font-size: 2.75rem;
   line-height: 1.3em;
   font-weight: 600;
   color: var(--primary-font-color);
 
   @media only screen and (max-width: 56.25rem) {
-    font-size: 3.4rem;
+    font-size: 2.125rem;
   }
 }
 
 h3 {
   font-family: var(--default-heading-font);
-  font-size: 3rem;
+  font-size: 1.875rem;
   line-height: 1.3em;
   font-weight: 600;
   color: var(--primary-font-color);
 
   @media only screen and (max-width: 56.25rem) {
-    font-size: 2.4rem;
+    font-size: 1.5rem;
   }
 }
 
 h4 {
   font-family: var(--default-heading-font);
-  font-size: 2.4rem;
+  font-size: 1.5rem;
   line-height: 1.2em;
   font-weight: 500;
   color: var(--primary-font-color);
 
   @media only screen and (max-width: 56.25rem) {
-    font-size: 2rem;
+    font-size: 1.25rem;
   }
 }
 
 p,
 a,
 li {
-  font-size: 1.8rem;
+  font-size: 1.125rem;
   line-height: 1.6em;
   font-weight: 400;
   color: var(--primary-font-color);
@@ -66,7 +66,7 @@ ul {
 }
 
 li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .textCentered {

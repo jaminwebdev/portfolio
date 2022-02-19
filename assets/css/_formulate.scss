@@ -1,8 +1,8 @@
 .formulate-input[data-classification="text"] input,
 .formulate-input[data-classification="select"] select,
 .formulate-input[data-classification="textarea"] textarea {
-  font-size: 1.8rem !important;
-  padding: 0.75rem 1rem !important;
+  font-size: 1.125rem !important;
+  padding: 0.45rem 1rem !important;
 }
 
 .formulate-input .formulate-input-element {
@@ -12,12 +12,12 @@
 .formulate-input .formulate-input-error,
 .formulate-input .formulate-input-label,
 .formulate-input .formulate-input-help {
-  font-size: 1.6rem !important;
+  font-size: 1rem !important;
 }
 
 .formulate-input[data-classification="box"] .formulate-input-element-decorator {
-  width: 2.3rem !important;
-  height: 2.3rem !important;
+  width: 1.45rem !important;
+  height: 1.45rem !important;
 
   &:hover {
     cursor: pointer !important;
@@ -26,7 +26,7 @@
 
 .formulate-input[data-classification="box"] .formulate-input-element {
   max-width: auto !important;
-  min-width: 2.5rem !important;
+  min-width: 1.55rem !important;
 }
 
 .formulate-input[data-classification="select"]

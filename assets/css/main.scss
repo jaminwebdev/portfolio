@@ -6,9 +6,7 @@
 @import "./formulate";
 
 html {
-  font-size: 62.5%;
   box-sizing: border-box;
-
   background: var(--primary-page-background);
 }
 
@@ -17,6 +15,7 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -33,31 +32,40 @@ html {
   --primary-font-color: #2f495e;
 
   /* Breakpoints */
-  --bp-largest: 75em;
-  --bp-large: 68.75em;
-  --bp-medium: 56.25em;
-  --bp-small: 37.5em;
-  --bp-smallest: 31.25em;
+  --bp-largest: 1600px;
+  --bp-large: 1200px;
+  --bp-medium: 1000px;
+  --bp-small: 768px;
+  --bp-smallest: 576px;
+
+  /* Default Spacing */
+  --default-x-padding: 20px;
 
   /* Default Full Width Grid */
-  --default-full-layout-grid: [full-start] minmax(2rem, 1fr) [center-start]
-    minmax(0, 1200px) [center-end] minmax(2rem, 1fr) [full-end];
+  --default-full-layout-grid: [full-start] minmax(25px, 1fr) [center-start]
+    minmax(0, 1240px) [center-end] minmax(25px, 1fr) [full-end];
 
-  --default-two-columns-half: [full-start] minmax(3rem, 1fr) [left-start]
+  --default-two-columns-half: [full-start] minmax(25px, 1fr) [left-start]
     minmax(0, 600px) [left-end right-start] minmax(0, 600px) [right-end]
-    minmax(3rem, 1fr) [full-end];
+    minmax(25px, 1fr) [full-end];
 
-  --default-two-columns-two-thirds-left: [full-start] minmax(3rem, 1fr)
+  --default-two-columns-two-thirds-left: [full-start] minmax(25px, 1fr)
     [left-start] minmax(0, 900px) [left-end right-start] minmax(0, 300px)
-    [right-end] minmax(3rem, 1fr) [full-end];
+    [right-end] minmax(25px, 1fr) [full-end];
 
-  --default-two-columns-two-thirds-right: [full-start] minmax(3rem, 1fr)
+  --default-two-columns-two-thirds-right: [full-start] minmax(25px, 1fr)
     [left-start] minmax(0, 300px) [left-end right-start] minmax(0, 900px)
-    [right-end] minmax(3rem, 1fr) [full-end];
+    [right-end] minmax(3rem, 25px) [full-end];
 
   /* Font Families */
   --default-heading-font: "Poppins", sans-serif;
   --default-body-font: "Roboto", sans-serif;
+}
+
+.myContainer {
+  max-width: 1240px;
+  padding: 0px 25px;
+  margin: 0 auto;
 }
 
 .mainHighlight {
@@ -65,13 +73,13 @@ html {
 }
 
 .desktopVisible {
-  @media only screen and (max-width: 687px) {
+  @media only screen and (max-width: 768px) {
     display: none !important;
   }
 }
 
 .mobileVisible {
-  @media only screen and (min-width: 687px) {
+  @media only screen and (min-width: 768px) {
     display: none !important;
   }
 }
