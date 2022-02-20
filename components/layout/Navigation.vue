@@ -157,8 +157,8 @@ export default {
 
         & a {
           &:hover {
-            color: var(--primary-color-dark);
-            background: #edf2f7;
+            color: var(--secondary-color) !important;
+            background: rgba(var(--secondary-color-rgb), 0.1);
           }
         }
       }
