@@ -89,42 +89,42 @@ $link-focus-border: $primary;
 @import "./buefy-overrides/_button-overrides.sass";
 
 // button icon with svgs
-// .button {
-//   & span {
-//     display: flex;
-//     align-items: center;
-//   }
+.button {
+  & span {
+    display: flex;
+    align-items: center;
+  }
 
-//   &.is-medium svg {
-//     width: 2.2rem;
-//     max-height: 1.6rem;
-//     margin-bottom: 0.2rem;
+  &.is-medium svg {
+    width: 2.2rem;
+    max-height: 1.6rem;
+    margin-bottom: 0.2rem;
 
-//     &.icon-left {
-//       margin-right: 1rem;
-//     }
+    &.icon-left {
+      margin-right: 1rem;
+    }
 
-//     &.icon-right {
-//       margin-left: 1rem;
-//     }
-//   }
+    &.icon-right {
+      margin-left: 1rem;
+    }
+  }
 
-//   &.is-small svg {
-//     width: 1.6rem;
-//     max-height: 1.4rem;
-//     margin-bottom: 0.2rem;
+  &.is-small svg {
+    width: 1.6rem;
+    max-height: 1.4rem;
+    margin-bottom: 0.2rem;
 
-//     &.icon-left {
-//       margin-right: 0.75rem;
-//     }
+    &.icon-left {
+      margin-right: 0.75rem;
+    }
 
-//     &.icon-right {
-//       margin-left: 0.75rem;
-//     }
-//   }
-// }
+    &.icon-right {
+      margin-left: 0.75rem;
+    }
+  }
+}
 
-// .progress.is-small,
-// .is-small.progress-wrapper.is-not-native {
-//   height: 1rem;
-// }
+.progress.is-small,
+.is-small.progress-wrapper.is-not-native {
+  height: 1rem;
+}
