@@ -8,7 +8,9 @@
               <h1>
                 Hi, I'm Jamin
                 <br />
-                I'm a Front End Engineer.
+                I'm a
+                <span class="secondaryHighlight">Front End </span>
+                Engineer.
               </h1>
               <p>
                 I build websites and applications while leveraging blazingly fast tools and frameworks like Vue & Nuxt JS, React & Next JS, Angular,
@@ -36,7 +38,7 @@
         </template>
         <template #rightColumnOfTwo>
           <img src="/avatars/smiling-waving.svg" alt="Avatar of me smiling & waiving" id="headerAvatar" />
-          <nuxt-img id="laptopMockup" src="https://i.imgur.com/YjhWy2f.png" />
+          <nuxt-img id="laptopMockup" src="/leaning-laptop.png" />
         </template>
         <template #svgSeparatorBottom>
           <SvgSeparator type="tilt" fill="var(--primary-page-background)" custHeight="125px" class="bottom tiltDownLeft"></SvgSeparator>
@@ -85,6 +87,7 @@ export default {
           z-index: 25;
 
           & #headerAvatar {
+            top: initial;
             bottom: -300px;
             right: -320px;
             z-index: 25;
@@ -108,6 +111,7 @@ export default {
         }
 
         & #headerAvatar {
+          top: initial;
           bottom: -250px;
           right: -320px;
           z-index: 25;
@@ -127,12 +131,13 @@ export default {
 
   &.rounded {
     & .heroContainer {
-      padding: 125px 0;
+      padding: 150px 0 75px;
 
       @media only screen and (max-width: 1000px) {
         padding: 150px 0 100px;
 
         & #headerAvatar {
+          top: initial;
           bottom: -275px;
           right: -320px;
           transform: rotateZ(-20deg) rotateY(180deg) scale(0.7);
@@ -145,13 +150,14 @@ export default {
   & .heroContainer {
     & #headerAvatar {
       position: absolute;
-      bottom: 0;
-      right: -22%;
+      top: 0;
+      right: -17%;
       z-index: -1;
       max-width: none;
+      transform: rotate(25deg);
 
-      -webkit-filter: drop-shadow(20px 30px 20px rgba(var(--primary-color-dark-rgb), 0.15));
-      filter: drop-shadow(20px 30px 20px rgba(var(--primary-color-dark-rgb), 0.15));
+      -webkit-filter: drop-shadow(20px 30px 20px rgba(var(--primary-color-dark-rgb), 0.1));
+      filter: drop-shadow(20px 30px 20px rgba(var(--primary-color-dark-rgb), 0.1));
     }
 
     & .leftColumnOfTwo > div {
@@ -161,11 +167,6 @@ export default {
     }
 
     & #laptopMockup {
-      transform: scale(0.9);
-      margin-top: 5.5rem;
-      -webkit-filter: drop-shadow(60px 40px 30px rgba(var(--primary-color-dark-rgb), 0.2));
-      filter: drop-shadow(60px 40px 30px rgba(var(--primary-color-dark-rgb), 0.2));
-
       @media only screen and (max-width: 1000px) {
         display: none;
       }
