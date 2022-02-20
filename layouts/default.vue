@@ -135,7 +135,7 @@ export default {
 
     &Links {
       position: absolute;
-      top: 20rem;
+      top: 15rem;
       right: 9%;
 
       display: grid;
@@ -146,7 +146,7 @@ export default {
       color: #fff;
       text-decoration: none;
       font-size: 1.125rem;
-      margin-bottom: 30px;
+      margin-bottom: 50px;
 
       display: flex;
       align-items: center;
