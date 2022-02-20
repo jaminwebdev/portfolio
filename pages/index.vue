@@ -47,7 +47,8 @@
     </transition>
     <main>
       <Portfolio :portfolios="portfolios" :featPortfolio="featPortfolio" :type="getTheme" />
-      <Services :type="getTheme"></Services>
+      <Services :type="getTheme" />
+      <FavStack :type="getTheme" />
     </main>
   </div>
 </template>
