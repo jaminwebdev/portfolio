@@ -134,12 +134,12 @@ import { mapGetters } from "vuex"
 export default {
   props: ["portfolios", "featPortfolio", "type"],
   computed: {
-    ...mapGetters("theme", ["getTheme", "getThemeBorderRadius", "getThemeCards", "getThemeStackCards"]),
+    ...mapGetters("theme", ["getTheme", "getThemeCards"]),
   },
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .portfolio {
   padding: 100px 20px 150px;
 
