@@ -100,6 +100,7 @@ export default {
 </script>
 
 <style lang="scss">
+@use "@/assets/css/_variables.scss";
 .appCard {
   overflow: hidden;
   box-shadow: 0px 10px 20px rgba(37, 61, 126, 0.1);
@@ -119,7 +120,7 @@ export default {
     margin-top: 15px;
     margin-bottom: -25px;
 
-    @media only screen and (max-width: 56.25rem) {
+    @media only screen and (max-width: variables.$bp-small) {
       display: flex;
       flex-wrap: wrap;
     }

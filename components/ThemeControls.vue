@@ -49,6 +49,7 @@ export default {
 </script>
 
 <style lang="scss">
+@use "@/assets/css/_variables.scss";
 .theme {
   &__container {
     position: fixed;
@@ -66,7 +67,7 @@ export default {
       left: 10px;
     }
 
-    @media only screen and (max-width: 56.25rem) {
+    @media only screen and (max-width: variables.$bp-medium) {
       grid-gap: 25px;
       left: -230px;
       bottom: 3%;
@@ -86,7 +87,7 @@ export default {
     position: relative;
     transition: all 0.4s ease-out;
 
-    @media only screen and (max-width: 56.25rem) {
+    @media only screen and (max-width: variables.$bp-medium) {
       width: 45px;
       height: 45px;
     }

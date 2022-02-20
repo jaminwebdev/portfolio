@@ -140,6 +140,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@use "@/assets/css/_variables.scss";
 .portfolio {
   padding: 100px 20px 150px;
 
@@ -156,7 +157,7 @@ export default {
 
     margin-top: 35px;
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: variables.$bp-medium) {
       row-gap: 50px;
     }
   }

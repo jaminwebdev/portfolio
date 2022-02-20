@@ -47,6 +47,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@use "@/assets/css/_variables.scss";
 .myStack {
   overflow: hidden;
 }
@@ -123,7 +124,7 @@ export default {
       grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
     }
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: variables.$bp-medium) {
       padding: 75px 15px;
       grid-column: full-start/full-end;
 

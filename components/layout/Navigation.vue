@@ -59,6 +59,7 @@ export default {
 </script>
 
 <style lang="scss">
+@use "@/assets/css/_variables.scss";
 .appNav {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -70,7 +71,7 @@ export default {
   align-items: center;
   grid-template-columns: 3fr 4fr 1fr;
 
-  @media only screen and (max-width: 56.25rem) {
+  @media only screen and (max-width: variables.$bp-small) {
     grid-template-columns: 3fr 1fr;
   }
 
@@ -96,7 +97,7 @@ export default {
     & img {
       max-width: 200px;
 
-      @media only screen and (max-width: 56.25rem) {
+      @media only screen and (max-width: variables.$bp-small) {
         max-width: 160px;
       }
     }
@@ -120,7 +121,7 @@ export default {
       }
     }
 
-    @media only screen and (max-width: 56.25rem) {
+    @media only screen and (max-width: variables.$bp-small) {
       justify-self: end;
 
       &Links {
@@ -169,7 +170,7 @@ export default {
     display: none;
     transition: all 0.2s ease-out;
 
-    @media only screen and (max-width: 56.25rem) {
+    @media only screen and (max-width: variables.$bp-small) {
       display: inline-block;
     }
 
@@ -199,7 +200,7 @@ export default {
       }
     }
 
-    @media only screen and (max-width: 56.25rem) {
+    @media only screen and (max-width: variables.$bp-small) {
       display: none;
     }
   }

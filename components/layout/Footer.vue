@@ -39,6 +39,7 @@ export default {}
 </script>
 
 <style lang="scss">
+@use "@/assets/css/_variables.scss";
 .footer {
   padding-top: 3rem;
   background-color: #fafaff;
@@ -47,7 +48,7 @@ export default {}
   grid-template-columns: minmax(250px, 350px) repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 40px;
 
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: variables.$bp-medium) {
     justify-items: center;
     grid-template-columns: initial;
     padding-bottom: 3rem;
@@ -58,7 +59,7 @@ export default {}
     padding: 40px;
     grid-column: 1/2;
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: variables.$bp-medium) {
       grid-column: 1/-1;
     }
   }
@@ -70,11 +71,11 @@ export default {}
   &__quickLinks {
     grid-column: 2 / span 1;
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: variables.$bp-medium) {
       grid-column: 1 / span 1;
     }
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: variables.$bp-medium) {
       grid-column: 1 / -1;
       text-align: center;
     }
@@ -83,11 +84,11 @@ export default {}
   &__resources {
     grid-column: 3 / span 1;
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: variables.$bp-medium) {
       grid-column: 2 / span 1;
     }
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: variables.$bp-medium) {
       grid-column: 1 / -1;
       text-align: center;
     }
@@ -100,11 +101,11 @@ export default {}
       margin: 2rem 1.5rem 0;
     }
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: variables.$bp-medium) {
       grid-column: 3 / span 1;
     }
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: variables.$bp-medium) {
       grid-column: 1 / -1;
       text-align: center;
     }

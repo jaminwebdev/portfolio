@@ -26,6 +26,7 @@ export default {
 </script>
 
 <style lang="scss">
+@use "@/assets/css/_variables.scss";
 .heroContainer {
   position: relative;
   overflow: hidden;
@@ -57,7 +58,7 @@ export default {
       z-index: 50;
       padding-right: 3%;
 
-      @media only screen and (max-width: 1000px) {
+      @media only screen and (max-width: variables.$bp-medium) {
         padding-right: 0;
         grid-column: left-start/right-end;
 
@@ -75,7 +76,7 @@ export default {
       z-index: 100;
       position: relative;
 
-      @media only screen and (max-width: 1000px) {
+      @media only screen and (max-width: variables.$bp-medium) {
         grid-column: left-start/right-end;
       }
     }
@@ -88,7 +89,7 @@ export default {
     align-items: center;
     justify-items: center;
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: variables.$bp-medium) {
       grid-auto-rows: min-content;
     }
 
@@ -96,7 +97,7 @@ export default {
       grid-column: left-start/left-end;
       padding-right: 5%;
 
-      @media only screen and (max-width: 1000px) {
+      @media only screen and (max-width: variables.$bp-medium) {
         grid-column: left-start/right-end;
         grid-row: 1/2;
         padding-right: 0px;
@@ -115,7 +116,7 @@ export default {
       z-index: 100;
       position: relative;
 
-      @media only screen and (max-width: 1000px) {
+      @media only screen and (max-width: variables.$bp-medium) {
         grid-column: left-start/right-end;
       }
     }
@@ -134,7 +135,7 @@ export default {
       z-index: 50;
       padding-right: 3%;
 
-      @media only screen and (max-width: 1000px) {
+      @media only screen and (max-width: variables.$bp-medium) {
         padding-right: 0;
         grid-column: left-start/right-end;
 
@@ -152,7 +153,7 @@ export default {
       z-index: 100;
       position: relative;
 
-      @media only screen and (max-width: 1000px) {
+      @media only screen and (max-width: variables.$bp-medium) {
         grid-column: left-start/right-end;
       }
     }

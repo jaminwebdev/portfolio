@@ -42,6 +42,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@use "@/assets/css/_variables.scss";
 .favStack {
   padding: 125px 0;
 
@@ -65,7 +66,7 @@ export default {
       top: -30px;
     }
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: variables.$bp-medium) {
       grid-column: 2 / span 2;
     }
   }
@@ -92,7 +93,7 @@ export default {
       margin-bottom: 20px;
     }
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: variables.$bp-medium) {
       padding-left: 0;
       grid-column: 2 / span 2;
     }

@@ -19,6 +19,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@use "@/assets/css/_variables.scss";
 .services {
   &.slanted {
     overflow: hidden;
@@ -42,7 +43,7 @@ export default {
     background-position: center center;
     border-radius: 30px;
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: variables.$bp-medium) {
       padding: 75px 20px;
       grid-column: full-start/full-end;
     }

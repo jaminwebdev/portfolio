@@ -61,6 +61,7 @@ export default {
 </script>
 
 <style lang="scss">
+@use "@/assets/css/_variables.scss";
 .overlapCard {
   width: 100%;
 
@@ -74,7 +75,7 @@ export default {
     background-size: cover;
     background-position: center center;
 
-    @media only screen and (max-width: 100px) {
+    @media only screen and (max-width: variables.$bp-medium) {
       grid-column: 1 / span 4;
     }
   }
@@ -90,7 +91,7 @@ export default {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
-    @media only screen and (max-width: 100px) {
+    @media only screen and (max-width: variables.$bp-medium) {
       grid-column: 4 / -1;
     }
   }
@@ -161,7 +162,7 @@ export default {
     grid-auto-columns: max-content;
     margin-bottom: 20px;
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: variables.$bp-medium) {
       display: flex;
       flex-wrap: wrap;
     }
@@ -189,7 +190,7 @@ export default {
       grid-auto-flow: column;
       grid-gap: 5px;
 
-      @media only screen and (max-width: 1000px) {
+      @media only screen and (max-width: variables.$bp-medium) {
         grid-auto-columns: max-content;
         grid-gap: 10px;
       }

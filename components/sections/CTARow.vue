@@ -14,6 +14,7 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
+@use "@/assets/css/_variables.scss";
 .ctaRow {
   width: 100%;
 
@@ -31,7 +32,7 @@ export default {}
       grid-column: left-start/left-end;
       padding: 7.5rem 2rem;
 
-      @media only screen and (max-width: 56.25em) {
+      @media only screen and (max-width: variables.$bp-medium) {
         grid-column: left-start/right-end;
         padding: 4.5rem 0 0 0;
       }
@@ -41,7 +42,7 @@ export default {}
         color: #fafaff;
         margin: 0.5rem 0;
 
-        @media only screen and (max-width: 56.25em) {
+        @media only screen and (max-width: variables.$bp-medium) {
           text-align: center;
         }
       }
@@ -56,7 +57,7 @@ export default {}
 
       position: relative;
 
-      @media only screen and (max-width: 56.25em) {
+      @media only screen and (max-width: variables.$bp-medium) {
         grid-column: left-start/right-end;
         padding: 2rem 0 7rem 0;
       }
@@ -66,7 +67,7 @@ export default {}
         bottom: 0;
         right: 0;
 
-        @media only screen and (max-width: 56.25rem) {
+        @media only screen and (max-width: variables.$bp-medium) {
           max-width: 12rem;
           right: -2rem;
         }

@@ -171,13 +171,14 @@ export default {
 </script>
 
 <style lang="scss">
+@use "@/assets/css/_variables.scss";
 .myServiceTabs {
   width: 100%;
   display: grid;
   column-gap: 120px;
   grid-template-columns: 1fr 1.35fr;
 
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: variables.$bp-medium) {
     row-gap: 20px;
     grid-template-columns: 1fr;
   }
@@ -193,7 +194,7 @@ export default {
       text-align: left;
     }
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: variables.$bp-medium) {
       grid-column: 1/-1;
       grid-gap: 20px;
       grid-template-columns: repeat(3, 1fr);
@@ -218,7 +219,7 @@ export default {
     column-gap: 20px;
     align-items: center;
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: variables.$bp-medium) {
       grid-template-columns: 1fr;
       justify-items: center;
       padding: 1rem;
@@ -238,7 +239,7 @@ export default {
         stroke: var(--primary-color);
       }
 
-      @media only screen and (max-width: 1000px) {
+      @media only screen and (max-width: variables.$bp-medium) {
         padding: 10px;
         height: 45px;
         width: 45px;
@@ -264,7 +265,7 @@ export default {
         grid-column: 2/-1;
       }
 
-      @media only screen and (max-width: 1000px) {
+      @media only screen and (max-width: variables.$bp-medium) {
         & p {
           display: none;
         }
@@ -327,7 +328,7 @@ export default {
       margin-bottom: 35px;
     }
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: variables.$bp-medium) {
       grid-column: 1/-1;
       padding: 20px 0;
     }
@@ -357,7 +358,7 @@ export default {
       margin-right: 30px;
     }
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: variables.$bp-medium) {
       display: grid;
       grid-gap: 20px;
       justify-items: center;
