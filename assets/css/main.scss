@@ -31,6 +31,9 @@ html {
 
   --primary-font-color: #2f495e;
 
+  --secondary-color: #28c4ac;
+  --secondary-color-rgb: 40, 196, 172;
+
   /* Breakpoints */
   --bp-largest: 1600px;
   --bp-large: 1200px;
@@ -42,19 +45,15 @@ html {
   --default-x-padding: 20px;
 
   /* Default Full Width Grid */
-  --default-full-layout-grid: [full-start] minmax(25px, 1fr) [center-start]
-    minmax(0, 1240px) [center-end] minmax(25px, 1fr) [full-end];
+  --default-full-layout-grid: [full-start] minmax(25px, 1fr) [center-start] minmax(0, 1240px) [center-end] minmax(25px, 1fr) [full-end];
 
-  --default-two-columns-half: [full-start] minmax(25px, 1fr) [left-start]
-    minmax(0, 600px) [left-end right-start] minmax(0, 600px) [right-end]
+  --default-two-columns-half: [full-start] minmax(25px, 1fr) [left-start] minmax(0, 600px) [left-end right-start] minmax(0, 600px) [right-end]
     minmax(25px, 1fr) [full-end];
 
-  --default-two-columns-two-thirds-left: [full-start] minmax(25px, 1fr)
-    [left-start] minmax(0, 900px) [left-end right-start] minmax(0, 300px)
+  --default-two-columns-two-thirds-left: [full-start] minmax(25px, 1fr) [left-start] minmax(0, 900px) [left-end right-start] minmax(0, 300px)
     [right-end] minmax(25px, 1fr) [full-end];
 
-  --default-two-columns-two-thirds-right: [full-start] minmax(25px, 1fr)
-    [left-start] minmax(0, 300px) [left-end right-start] minmax(0, 900px)
+  --default-two-columns-two-thirds-right: [full-start] minmax(25px, 1fr) [left-start] minmax(0, 300px) [left-end right-start] minmax(0, 900px)
     [right-end] minmax(3rem, 25px) [full-end];
 
   /* Font Families */
@@ -70,6 +69,10 @@ html {
 
 .mainHighlight {
   color: var(--primary-color);
+}
+
+.secondaryHighlight {
+  color: var(--secondary-color);
 }
 
 .desktopVisible {
