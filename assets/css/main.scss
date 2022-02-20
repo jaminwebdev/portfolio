@@ -1,9 +1,10 @@
-@import "./buefy";
-@import "./typography";
-@import "./page-animation";
-@import "./animations";
-@import "~/node_modules/@braid/vue-formulate/themes/snow/snow";
-@import "./formulate";
+@use "./buefy";
+@use "./variables";
+@use "./typography";
+@use "./page-animation";
+@use "./animations";
+@use "~/node_modules/@braid/vue-formulate/themes/snow/snow";
+@use "./formulate";
 
 html {
   box-sizing: border-box;
@@ -78,13 +79,13 @@ html {
 }
 
 .desktopVisible {
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: variables.$bp-small) {
     display: none !important;
   }
 }
 
 .mobileVisible {
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: variables.$bp-small) {
     display: none !important;
   }
 }

@@ -25,14 +25,7 @@ export default {
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: {
-    dirs: [
-      "~/components",
-      "~/components/layout",
-      "~/components/cards",
-      "~/components/forms",
-      "~components/tabs",
-      "~components/sections",
-    ],
+    dirs: ["~/components", "~/components/layout", "~/components/cards", "~/components/forms", "~components/tabs", "~components/sections"],
   },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
@@ -80,4 +73,4 @@ export default {
       plugins: [["@babel/plugin-proposal-private-methods", { loose: true }]],
     },
   },
-};
+}
