@@ -43,6 +43,7 @@
         </template>
       </AppHero>
     </transition>
+    <main></main>
   </div>
 </template>
 

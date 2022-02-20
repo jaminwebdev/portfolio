@@ -6,7 +6,6 @@
         <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M17.5 31.5C9.7825 31.5 3.5 25.2175 3.5 17.5C3.5 9.7825 9.7825 3.5 17.5 3.5C25.2175 3.5 31.5 9.7825 31.5 17.5C31.5 25.2175 25.2175 31.5 17.5 31.5ZM17.5 0C7.8225 0 0 7.8225 0 17.5C0 27.1775 7.8225 35 17.5 35C27.1775 35 35 27.1775 35 17.5C35 7.8225 27.1775 0 17.5 0ZM22.0325 10.5L17.5 15.0325L12.9675 10.5L10.5 12.9675L15.0325 17.5L10.5 22.0325L12.9675 24.5L17.5 19.9675L22.0325 24.5L24.5 22.0325L19.9675 17.5L24.5 12.9675L22.0325 10.5Z"
-            fill="#fff"
           />
         </svg>
       </p>
@@ -61,6 +60,7 @@
         <Navigation class="app__layoutNav" @toggleMobileMenu="toggleMobileMenu" :type="getTheme"></Navigation>
         <Nuxt class="app__layoutMain" />
         <Footer class="app__layoutFooter"></Footer>
+        <ThemeControls></ThemeControls>
       </div>
     </div>
   </div>
@@ -136,7 +136,7 @@ export default {
     &Links {
       position: absolute;
       top: 20rem;
-      right: 7%;
+      right: 9%;
 
       display: grid;
       grid-template-columns: 1fr;
@@ -145,8 +145,8 @@ export default {
     &Link {
       color: #fff;
       text-decoration: none;
-      font-size: 2rem;
-      margin-bottom: 3rem;
+      font-size: 1.125rem;
+      margin-bottom: 30px;
 
       display: flex;
       align-items: center;
@@ -161,18 +161,25 @@ export default {
 
       & svg {
         fill: #fff;
-        width: 2.5rem;
+        width: 30px;
         margin-right: 1.5rem;
       }
     }
 
     &Close {
       position: absolute;
-      top: 4rem;
-      right: 5rem;
+      top: 50px;
+      right: 25px;
 
       & svg {
         margin-left: 1rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+        & svg {
+          fill: var(--primary-color-light);
+        }
       }
     }
   }
