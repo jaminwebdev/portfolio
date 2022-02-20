@@ -50,6 +50,7 @@
       <Services :type="getTheme" />
       <FavStack :type="getTheme" />
       <MoreStacks :type="getTheme" />
+      <OtherTech :type="getTheme" :technologies="technologies" />
     </main>
   </div>
 </template>
@@ -82,6 +83,7 @@ export default {
 </script>
 
 <style lang="scss">
+@use "@/assets/css/_variables.scss";
 .homeContainer {
   overflow-x: hidden;
 
@@ -89,7 +91,7 @@ export default {
     & .heroContainer {
       padding: 200px 0 150px;
 
-      @media only screen and (max-width: 1000px) {
+      @media only screen and (max-width: variables.$bp-medium) {
         padding: 150px 10px 120px;
         min-height: 600px;
 
@@ -112,7 +114,7 @@ export default {
     & .heroContainer {
       padding: 200px 0 150px;
 
-      @media only screen and (max-width: 1000px) {
+      @media only screen and (max-width: variables.$bp-medium) {
         padding-top: 150px;
         min-height: 700px;
 
@@ -143,7 +145,7 @@ export default {
     & .heroContainer {
       padding: 150px 0 75px;
 
-      @media only screen and (max-width: 1000px) {
+      @media only screen and (max-width: variables.$bp-medium) {
         padding: 150px 0 100px;
 
         & #headerAvatar {
@@ -177,7 +179,7 @@ export default {
     }
 
     & #laptopMockup {
-      @media only screen and (max-width: 1000px) {
+      @media only screen and (max-width: variables.$bp-medium) {
         display: none;
       }
     }
