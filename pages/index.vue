@@ -45,15 +45,23 @@
         </template>
       </AppHero>
     </transition>
-    <main></main>
+    <main>
+      <Portfolio :portfolios="portfolios" :featPortfolio="featPortfolio" :type="getTheme" />
+      <Services :type="getTheme"></Services>
+    </main>
   </div>
 </template>
 
 <script>
+import { portfolios, featPortfolio } from "../helpers/portfolio"
+import { technologies } from "../helpers/otherTech"
 import { mapGetters } from "vuex"
 export default {
   data() {
     return {
+      portfolios,
+      featPortfolio,
+      technologies,
       showForm: false,
     }
   },
