@@ -49,6 +49,7 @@
       <Portfolio :portfolios="portfolios" :featPortfolio="featPortfolio" :type="getTheme" />
       <Services :type="getTheme" />
       <FavStack :type="getTheme" />
+      <MoreStacks :type="getTheme" />
     </main>
   </div>
 </template>

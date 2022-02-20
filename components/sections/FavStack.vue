@@ -52,7 +52,7 @@ export default {
   grid-template-columns: var(--default-two-columns-half);
 
   &__leftColumn {
-    grid-column: 1/3;
+    grid-column: 2/3;
     display: grid;
     justify-items: center;
 
@@ -60,7 +60,7 @@ export default {
 
     & .blueDottedSquare {
       position: absolute;
-      z-index: -1;
+      z-index: 1;
       left: -40px;
       top: -30px;
     }
@@ -73,13 +73,15 @@ export default {
   &__devices {
     &--desktop {
       box-shadow: 40px 60px 80px rgba(39, 89, 161, 0.1);
+      z-index: 2;
     }
 
     &--mobile {
       position: absolute;
-      right: 10px;
+      right: -20px;
       bottom: 0;
       max-height: 90%;
+      z-index: 2;
     }
   }
 
@@ -92,7 +94,7 @@ export default {
 
     @media only screen and (max-width: 1000px) {
       padding-left: 0;
-      grid-column: 1 / -1;
+      grid-column: 2 / span 2;
     }
   }
 
