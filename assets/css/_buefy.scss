@@ -9,6 +9,11 @@ $primary-invert: findColorInvert($primary);
 $twitter: #4099ff;
 $twitter-invert: findColorInvert($twitter);
 
+$info: #28c4ac;
+$info-light: findLightColor($info);
+$info-dark: $info;
+$info-invert: findColorInvert($info);
+
 // Lists and maps
 $custom-colors: null !default;
 $custom-shades: null !default;
