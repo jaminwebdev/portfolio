@@ -34,6 +34,7 @@
                 </svg>
               </b-button>
             </div>
+            <WebsiteQuestionnaire v-else :light="getTheme !== 'minimal'"> </WebsiteQuestionnaire>
           </transition>
         </template>
         <template #rightColumnOfTwo>
