@@ -52,22 +52,6 @@
       <FavStack :type="getTheme" />
       <MoreStacks :type="getTheme" />
       <OtherTech :type="getTheme" :technologies="technologies" />
-      <div class="container px-4 is-fullhd">
-        <div class="columns is-multiline">
-          <div class="column is-one-third-tablet is-one-quarter-desktop">
-            <p class="notification is-info">First column</p>
-          </div>
-          <div class="column is-one-third-tablet is-one-quarter-desktop">
-            <p class="notification is-info">Second column</p>
-          </div>
-          <div class="column is-one-third-tablet is-one-quarter-desktop">
-            <p class="notification is-info">Third column</p>
-          </div>
-          <div class="column is-one-third-tablet is-one-quarter-desktop">
-            <p class="notification is-info">Fourth column</p>
-          </div>
-        </div>
-      </div>
     </main>
   </div>
 </template>
