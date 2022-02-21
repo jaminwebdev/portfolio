@@ -1,0 +1,135 @@
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+// Set your colors
+$primary: #3172bc;
+$primary-light: findLightColor($primary);
+$primary-dark: findDarkColor($primary);
+$primary-invert: findColorInvert($primary);
+$twitter: #4099ff;
+$twitter-invert: findColorInvert($twitter);
+
+$info: #28c4ac;
+$info-light: findLightColor($info);
+$info-dark: $info;
+$info-invert: findColorInvert($info);
+
+// Lists and maps
+$custom-colors: null !default;
+$custom-shades: null !default;
+
+$size-small: 1.125rem;
+$size-normal: 1.125rem;
+$size-medium: 1.25rem;
+$size-large: 1.5rem;
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: mergeColorMaps(
+  (
+    "white": (
+      $white,
+      $black,
+    ),
+    "black": (
+      $black,
+      $white,
+    ),
+    "light": (
+      $light,
+      $light-invert,
+    ),
+    "dark": (
+      $dark,
+      $dark-invert,
+    ),
+    "primary": (
+      $primary,
+      $primary-invert,
+      $primary-light,
+      $primary-dark,
+    ),
+    "link": (
+      $link,
+      $link-invert,
+      $link-light,
+      $link-dark,
+    ),
+    "info": (
+      $info,
+      $info-invert,
+      $info-light,
+      $info-dark,
+    ),
+    "success": (
+      $success,
+      $success-invert,
+      $success-light,
+      $success-dark,
+    ),
+    "warning": (
+      $warning,
+      $warning-invert,
+      $warning-light,
+      $warning-dark,
+    ),
+    "danger": (
+      $danger,
+      $danger-invert,
+      $danger-light,
+      $danger-dark,
+    ),
+  ),
+  $custom-colors
+);
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+
+@import "./buefy-overrides/_button-overrides.sass";
+
+// button icon with svgs
+.button {
+  & span {
+    display: flex;
+    align-items: center;
+  }
+
+  &.is-medium svg {
+    width: 1.375rem;
+    max-height: 1rem;
+    margin-bottom: 2px;
+
+    &.icon-left {
+      margin-right: 10px;
+    }
+
+    &.icon-right {
+      margin-left: 10px;
+    }
+  }
+
+  &.is-small svg {
+    width: 1rem;
+    max-height: 0.875rem;
+    margin-bottom: 2px;
+
+    &.icon-left {
+      margin-right: 7.5px;
+    }
+
+    &.icon-right {
+      margin-left: 7.5px;
+    }
+  }
+}
+
+.progress.is-small,
+.is-small.progress-wrapper.is-not-native {
+  height: 10px;
+}
