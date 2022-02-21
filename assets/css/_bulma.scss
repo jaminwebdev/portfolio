@@ -1,0 +1,56 @@
+// Import bulma styles
+@use "~/node_modules/bulma";
+
+$primary: #3172bc;
+$info: #28c4ac;
+
+@import "~/node_modules/bulma/sass/utilities/_all.sass";
+@import "~/node_modules/bulma/sass/base/_all.sass";
+@import "~/node_modules/bulma/sass/elements/button.sass";
+@import "~/node_modules/bulma/sass/elements/container.sass";
+
+.button {
+  & span {
+    display: flex;
+    align-items: center;
+  }
+
+  &.is-medium {
+    & svg {
+      width: 22px;
+      max-height: 16px;
+
+      &.icon-left {
+        margin-right: 10px;
+      }
+
+      &.icon-right {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &.is-small {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 42px;
+
+    & span {
+      font-size: 16px;
+    }
+
+    & svg {
+      width: 16px;
+      max-height: 14px;
+      margin-bottom: 2px;
+
+      &.icon-left {
+        margin-right: 7.5px;
+      }
+
+      &.icon-right {
+        margin-left: 7.5px;
+      }
+    }
+  }
+}
