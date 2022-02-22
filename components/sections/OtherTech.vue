@@ -6,13 +6,22 @@
         <span class="secondaryHighlight">Can I Do?</span>
       </h2>
       <p>
-        I’m a big fan of constantly learning new technologies and goodies to add to my stack. Here’s a list of items I'm also intimately familiar
-        with, or continually learning more about.
+        I’m a big fan of constantly learning new technologies and goodies to add to my stack. Here’s
+        a list of items I'm also intimately familiar with, or continually learning more about.
       </p>
       <p>Click on any of the icons to learn more.</p>
     </div>
     <div class="rightColumnOfTwo">
-      <BaseIcon v-for="tech in technologies" :key="tech" :icon="tech" clickable @iconClicked="launchIconModal"> </BaseIcon>
+      <BaseIcon
+        v-for="tech in technologies"
+        :key="tech"
+        :icon="tech"
+        clickable
+        @iconClicked="launchIconModal"
+        :width="100"
+        :height="100"
+      >
+      </BaseIcon>
     </div>
   </section>
 </template>

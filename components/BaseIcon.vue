@@ -78,8 +78,8 @@ export default {
   }
 
   & img {
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 80%;
+    max-height: 80%;
     z-index: 10;
   }
 }
