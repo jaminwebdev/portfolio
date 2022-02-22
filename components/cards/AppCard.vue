@@ -37,7 +37,7 @@
 <script>
 export default {
   props: {
-    type: String, // default, roundedBg, rounded, bordered, bgVector
+    type: String, // slanted, roundedBg, rounded, bordered, bgVector
     bgImg: {
       type: String,
       default: "/CardBGVector.svg",
@@ -221,7 +221,7 @@ export default {
   }
 }
 
-.defaultCard {
+.slantedCard {
   grid-template-rows: 255px;
 
   &__imgContainer {
@@ -233,7 +233,7 @@ export default {
       height: 255px;
       grid-row: 1 / 2;
 
-      & ~ .defaultCard__contentContainer {
+      & ~ .slantedCard__contentContainer {
         padding: 15px 30px 30px;
       }
     }
@@ -298,19 +298,7 @@ export default {
     &:not(:empty) {
       height: 255px;
       grid-row: 1 / 2;
-      margin: 18px;
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(to right, rgba(var(--primary-color-dark-rgb), 0.7), rgba(var(--primary-color-dark-rgb), 0.7));
-        z-index: 10;
-        border-radius: 15px;
-      }
+      margin: 12px;
 
       & ~ .roundedCard__contentContainer {
         padding: 15px 30px 30px;
@@ -340,7 +328,7 @@ export default {
     align-self: end;
     display: grid;
     align-items: end;
-    padding: 0 25px 10px;
+    padding: 0 20px 15px;
   }
 
   &__icons {

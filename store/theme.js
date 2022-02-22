@@ -39,11 +39,11 @@ export const getters = {
   },
   getThemeCards(state) {
     // default, roundedBg, rounded,
-    let cardType = "default"
+    let cardType = "slanted"
 
     switch (state.theme) {
-      case "default":
-        cardType = "default"
+      case "slanted":
+        cardType = "slanted"
         break
       case "rounded":
         cardType = "roundedBg"
@@ -52,7 +52,7 @@ export const getters = {
         cardType = "rounded"
         break
       default:
-        cardType = "default"
+        cardType = "slanted"
     }
 
     return cardType
