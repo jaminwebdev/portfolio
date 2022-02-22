@@ -1,5 +1,5 @@
 export const featPortfolio = {
-  coverImg: "https://i.imgur.com/DgbU6sB.jpg",
+  coverImg: "https://imgur.com/WNmG3Q6.jpg",
   alt: "default portfolio image",
   heading: "Feat Portfolio",
   body: "Lorem ipsum dolor sit amet, word and some adipiscing elit. Lorem ipsum dolor sit amet, word and some adipiscing elit.",
@@ -12,7 +12,7 @@ export const featPortfolio = {
 
 export const portfolios = [
   {
-    coverImg: "https://i.imgur.com/DgbU6sB.jpg",
+    coverImg: "https://imgur.com/WNmG3Q6.jpg",
     alt: "default portfolio image",
     heading: "Sadie's Faves",
     body: "Lorem ipsum dolor sit amet, word and some adipiscing elit. Lorem ipsum dolor sit amet, word and some adipiscing elit.",
@@ -23,7 +23,7 @@ export const portfolios = [
     icons: ["nuxt", "node", "postgres"],
   },
   {
-    coverImg: "https://i.imgur.com/DgbU6sB.jpg",
+    coverImg: "https://imgur.com/WNmG3Q6.jpg",
     alt: "default portfolio image",
     heading: "Sadie's Faves 2",
     body: "Lorem ipsum dolor sit amet, word and some adipiscing elit. Lorem ipsum dolor sit amet, word and some adipiscing elit.",
@@ -34,7 +34,7 @@ export const portfolios = [
     icons: ["next", "node", "mongo"],
   },
   {
-    coverImg: "https://i.imgur.com/DgbU6sB.jpg",
+    coverImg: "https://imgur.com/WNmG3Q6.jpg",
     alt: "default portfolio image",
     heading: "Sadie's Faves 3",
     body: "Lorem ipsum dolor sit amet, word and some adipiscing elit. Lorem ipsum dolor sit amet, word and some adipiscing elit.",
