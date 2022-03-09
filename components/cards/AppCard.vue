@@ -1,6 +1,9 @@
 <template>
   <div :class="['appCard', `${type}Card`, { noOverlay, noImg }]" :style="styleConfig">
-    <div :class="[`${type}Card__imgContainer`, 'appCard__imgContainer']" v-if="type !== 'roundedBg'">
+    <div
+      :class="[`${type}Card__imgContainer`, 'appCard__imgContainer']"
+      v-if="type !== 'roundedBg'"
+    >
       <slot name="img"></slot>
     </div>
     <div :class="[`${type}Card__tagContainer`, 'appCard__tagContainer']">
@@ -116,7 +119,8 @@ export default {
     grid-auto-columns: max-content;
 
     border-top: 1px solid #e8e8e8;
-    padding-top: 10px;
+    padding-top: 15px;
+    padding-bottom: 10px;
     margin-top: 15px;
     margin-bottom: -25px;
 
@@ -145,7 +149,7 @@ export default {
       justify-items: center;
       align-items: center;
       grid-auto-flow: column;
-      grid-gap: 0.5rem;
+      grid-gap: 5px;
     }
   }
 
