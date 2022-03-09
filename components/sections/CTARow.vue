@@ -1,12 +1,14 @@
 <template>
-  <div class="ctaRow__container">
-    <div class="leftColumnOfTwo">
-      <slot name="leftColumnOfTwo"></slot>
+  <section class="ctaRow myContainer">
+    <div class="ctaRow__innerContainer">
+      <div class="leftColumnOfTwo">
+        <slot name="leftColumnOfTwo"></slot>
+      </div>
+      <div class="rightColumnOfTwo">
+        <slot name="rightColumnOfTwo"></slot>
+      </div>
     </div>
-    <div class="rightColumnOfTwo">
-      <slot name="rightColumnOfTwo"></slot>
-    </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -16,11 +18,11 @@ export default {}
 <style lang="scss" scoped>
 @use "@/assets/css/_variables.scss";
 .ctaRow {
-  width: 100%;
+  margin: 50px auto;
 
-  &__container {
+  &__innerContainer {
     width: 100%;
-    border-radius: 1.5rem;
+    border-radius: 15px;
     background: url("static/Main Background Vector.svg");
     background-size: cover;
     background-position: center center;
@@ -30,17 +32,17 @@ export default {}
 
     & .leftColumnOfTwo {
       grid-column: left-start/left-end;
-      padding: 7.5rem 2rem;
+      padding: 75px 20px;
 
       @media only screen and (max-width: variables.$bp-medium) {
         grid-column: left-start/right-end;
-        padding: 4.5rem 0 0 0;
+        padding: 45px 0 0 0;
       }
 
       & h2,
       & p {
         color: #fafaff;
-        margin: 0.5rem 0;
+        margin: 5px 0;
 
         @media only screen and (max-width: variables.$bp-medium) {
           text-align: center;
@@ -59,7 +61,7 @@ export default {}
 
       @media only screen and (max-width: variables.$bp-medium) {
         grid-column: left-start/right-end;
-        padding: 2rem 0 7rem 0;
+        padding: 20px 0 70px 0;
       }
 
       & img {
@@ -67,9 +69,9 @@ export default {}
         bottom: 0;
         right: 0;
 
-        @media only screen and (max-width: variables.$bp-medium) {
-          max-width: 12rem;
-          right: -2rem;
+        @media only screen and (max-width: variables.$bp-small) {
+          max-width: 150px;
+          right: 3%;
         }
       }
     }

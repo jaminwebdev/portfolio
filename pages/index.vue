@@ -71,6 +71,22 @@
       <MoreStacks :type="getTheme" />
       <OtherTech :type="getTheme" :technologies="technologies" />
       <LearnJS :type="getTheme" />
+      <CTARow>
+        <template #leftColumnOfTwo>
+          <h2>Let’s Chat</h2>
+          <p>Drop me a line and let’s make something happen!</p>
+        </template>
+        <template #rightColumnOfTwo>
+          <b-button size="is-medium" tag="router-link" to="/" type="is-primary is-light">
+            Let's Do This!
+          </b-button>
+          <img
+            src="/avatars/casual-talkative.svg"
+            alt="Avatar of me gesturing towards a contact button"
+            id="catRowAvatar"
+          />
+        </template>
+      </CTARow>
     </main>
   </div>
 </template>
