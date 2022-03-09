@@ -13,12 +13,21 @@
                 Engineer.
               </h1>
               <p>
-                I build websites and applications while leveraging blazingly fast tools and frameworks like Vue & Nuxt JS, React & Next JS, Angular,
-                and Node.
+                I build websites and applications while leveraging blazingly fast tools and
+                frameworks like Vue & Nuxt JS, React & Next JS, Angular, and Node.
               </p>
-              <b-button size="is-medium" :type="getTheme === 'minimal' ? 'is-primary' : 'is-primary is-light'" @click="showWebsiteForm">
+              <b-button
+                size="is-medium"
+                :type="getTheme === 'minimal' ? 'is-primary' : 'is-primary is-light'"
+                @click="showWebsiteForm"
+              >
                 My Portfolio
-                <svg class="icon-right" viewBox="0 0 40 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                  class="icon-right"
+                  viewBox="0 0 40 32"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
                     d="M0 4C0 2.93913 0.421427 1.92172 1.17157 1.17157C1.92172 0.421427 2.93913 0 4 0H33.3333C34.3942 0 35.4116 0.421427 36.1618 1.17157C36.9119 1.92172 37.3333 2.93913 37.3333 4V22.6667C37.3333 23.7275 36.9119 24.7449 36.1618 25.4951C35.4116 26.2452 34.3942 26.6667 33.3333 26.6667H16.5333V24H33.3333C33.687 24 34.0261 23.8595 34.2761 23.6095C34.5262 23.3594 34.6667 23.0203 34.6667 22.6667V4C34.6667 3.64638 34.5262 3.30724 34.2761 3.05719C34.0261 2.80714 33.687 2.66667 33.3333 2.66667H4C3.64638 2.66667 3.30724 2.80714 3.05719 3.05719C2.80714 3.30724 2.66667 3.64638 2.66667 4V8H0V4Z"
                   />
@@ -38,11 +47,20 @@
           </transition>
         </template>
         <template #rightColumnOfTwo>
-          <img src="/avatars/smiling-waving.svg" alt="Avatar of me smiling & waiving" id="headerAvatar" />
+          <img
+            src="/avatars/smiling-waving.svg"
+            alt="Avatar of me smiling & waiving"
+            id="headerAvatar"
+          />
           <nuxt-img id="laptopMockup" src="/leaning-laptop.png" />
         </template>
         <template #svgSeparatorBottom>
-          <SvgSeparator type="tilt" fill="var(--primary-page-background)" custHeight="125px" class="bottom tiltDownLeft"></SvgSeparator>
+          <SvgSeparator
+            type="tilt"
+            fill="var(--primary-page-background)"
+            custHeight="125px"
+            class="bottom tiltDownLeft"
+          ></SvgSeparator>
         </template>
       </AppHero>
     </transition>
@@ -52,6 +70,7 @@
       <FavStack :type="getTheme" />
       <MoreStacks :type="getTheme" />
       <OtherTech :type="getTheme" :technologies="technologies" />
+      <LearnJS :type="getTheme" />
     </main>
   </div>
 </template>
@@ -78,7 +97,12 @@ export default {
     },
   },
   computed: {
-    ...mapGetters("theme", ["getTheme", "getThemeBorderRadius", "getThemeCards", "getThemeStackCards"]),
+    ...mapGetters("theme", [
+      "getTheme",
+      "getThemeBorderRadius",
+      "getThemeCards",
+      "getThemeStackCards",
+    ]),
   },
 }
 </script>
