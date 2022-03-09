@@ -1,11 +1,12 @@
 <template>
-  <div
-    :class="['iconContainer', bordered ? 'bordered' : '', clickable ? 'clickable' : '']"
-    :style="{ height: `${height}px`, width: `${width}px` }"
-    @click="iconClicked"
-  >
-    <img :src="iconPath" :alt="`${icon} logo`" />
-  </div>
+  <a :href="iconLink" target="_blank">
+    <div
+      :class="['iconContainer', bordered ? 'bordered' : '']"
+      :style="{ height: `${height}px`, width: `${width}px` }"
+    >
+      <img :src="iconPath" :alt="`${icon} logo`" />
+    </div>
+  </a>
 </template>
 
 <script>
@@ -26,13 +27,9 @@ export default {
     bordered: {
       type: Boolean,
     },
-    clickable: {
-      type: Boolean,
-    },
-  },
-  methods: {
-    iconClicked() {
-      this.$emit("iconClicked", this.icon)
+    iconLink: {
+      type: String,
+      required: true,
     },
   },
   computed: {
@@ -47,7 +44,7 @@ export default {
 .iconContainer {
   background: #fafaff;
   border-radius: 50%;
-  transition: transform 0.5s ease-out;
+  transition: transform 0.3s ease-out;
 
   padding: 10px;
   display: grid;
@@ -70,17 +67,14 @@ export default {
     }
   }
 
-  &.clickable {
-    &:hover {
-      transform: scale(1.1);
-      cursor: pointer;
-    }
-  }
-
   & img {
     max-width: 80%;
     max-height: 80%;
     z-index: 10;
+  }
+
+  &:hover {
+    transform: scale(1.1);
   }
 }
 </style>

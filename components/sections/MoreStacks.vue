@@ -1,38 +1,92 @@
 <template>
   <section :class="['myStack', type]">
-    <SvgSeparator type="moving" fill="var(--primary-page-background)" custHeight="100px" class="top" v-if="getTheme === 'slanted'"></SvgSeparator>
-    <h2 class="myStack__heading">More Tech <span :class="getTheme === 'minimal' ? 'secondaryHighlight' : ''">I Love</span></h2>
+    <SvgSeparator
+      type="moving"
+      fill="var(--primary-page-background)"
+      custHeight="100px"
+      class="top"
+      v-if="getTheme === 'slanted'"
+    ></SvgSeparator>
+    <h2 class="myStack__heading">
+      More Tech <span :class="getTheme === 'minimal' ? 'secondaryHighlight' : ''">I Love</span>
+    </h2>
     <div class="myStack__cardContainer">
-      <AppCard :type="getThemeStackCards" :borderRadius="getThemeBorderRadius" bgColor="transparent" borderColor="#fff">
+      <AppCard
+        :type="getThemeStackCards"
+        :borderRadius="getThemeBorderRadius"
+        bgColor="transparent"
+        borderColor="#fff"
+      >
         <template #icons>
-          <BaseIcon icon="nuxt" bordered clickable :height="70" :width="70"> </BaseIcon>
-          <BaseIcon icon="supabase" bordered clickable :height="70" :width="70"> </BaseIcon>
+          <BaseIcon icon="nuxt" iconLink="https://nuxtjs.org/" bordered :height="70" :width="70">
+          </BaseIcon>
+          <BaseIcon
+            icon="supabase"
+            iconLink="https://supabase.com/"
+            bordered
+            :height="70"
+            :width="70"
+          >
+          </BaseIcon>
         </template>
         <template #heading>
           <h3 class="textCentered" style="color: #fff">Nuxt & <br />Supabase</h3>
         </template>
       </AppCard>
-      <AppCard :type="getThemeStackCards" :borderRadius="getThemeBorderRadius" bgColor="transparent" borderColor="#fff">
+      <AppCard
+        :type="getThemeStackCards"
+        :borderRadius="getThemeBorderRadius"
+        bgColor="transparent"
+        borderColor="#fff"
+      >
         <template #icons>
-          <BaseIcon icon="next" bordered clickable :height="70" :width="70"> </BaseIcon>
-          <BaseIcon icon="node" bordered clickable :height="70" :width="70"> </BaseIcon>
-          <BaseIcon icon="mongo" bordered clickable :height="70" :width="70"> </BaseIcon>
+          <BaseIcon icon="next" iconLink="https://nextjs.org/" bordered :height="70" :width="70">
+          </BaseIcon>
+          <BaseIcon icon="node" iconLink="https://nodejs.org/en/" bordered :height="70" :width="70">
+          </BaseIcon>
+          <BaseIcon
+            icon="mongo"
+            iconLink="https://www.mongodb.com/"
+            bordered
+            :height="70"
+            :width="70"
+          >
+          </BaseIcon>
         </template>
         <template #heading>
           <h3 class="textCentered" style="color: #fff">Next, Node & Mongo</h3>
         </template>
       </AppCard>
-      <AppCard :type="getThemeStackCards" :borderRadius="getThemeBorderRadius" bgColor="transparent" borderColor="#fff">
+      <AppCard
+        :type="getThemeStackCards"
+        :borderRadius="getThemeBorderRadius"
+        bgColor="transparent"
+        borderColor="#fff"
+      >
         <template #icons>
-          <BaseIcon icon="angular" bordered clickable :height="70" :width="70"> </BaseIcon>
-          <BaseIcon icon="firebase" bordered clickable :height="70" :width="70"> </BaseIcon>
+          <BaseIcon icon="angular" iconLink="https://angular.io/" bordered :height="70" :width="70">
+          </BaseIcon>
+          <BaseIcon
+            icon="firebase"
+            iconLink="https://firebase.google.com/"
+            bordered
+            :height="70"
+            :width="70"
+          >
+          </BaseIcon>
         </template>
         <template #heading>
           <h3 class="textCentered" style="color: #fff">Angular & Firebase</h3>
         </template>
       </AppCard>
     </div>
-    <SvgSeparator type="moving" fill="var(--primary-page-background)" custHeight="100px" class="bottom" v-if="getTheme === 'slanted'"></SvgSeparator>
+    <SvgSeparator
+      type="moving"
+      fill="var(--primary-page-background)"
+      custHeight="100px"
+      class="bottom"
+      v-if="getTheme === 'slanted'"
+    ></SvgSeparator>
   </section>
 </template>
 

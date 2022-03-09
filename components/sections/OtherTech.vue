@@ -14,10 +14,9 @@
     <div class="rightColumnOfTwo">
       <BaseIcon
         v-for="tech in technologies"
-        :key="tech"
-        :icon="tech"
-        clickable
-        @iconClicked="launchIconModal"
+        :key="tech.name"
+        :icon="tech.name"
+        :iconLink="tech.iconLink"
         :width="100"
         :height="100"
       >
@@ -29,11 +28,6 @@
 <script>
 export default {
   props: ["technologies", "type"],
-  methods: {
-    launchIconModal(icon) {
-      console.log(`Launching the ${icon} modal`)
-    },
-  },
 }
 </script>
 

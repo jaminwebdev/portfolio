@@ -8,6 +8,7 @@ export const featPortfolio = {
   view: "https://google.com",
   svg: true,
   icons: ["nuxt", "node", "postgres"],
+  iconLinks: ["https://nuxtjs.org/", "https://nodejs.org/en/", "https://www.postgresql.org/"],
 }
 
 export const portfolios = [
@@ -21,6 +22,7 @@ export const portfolios = [
     view: "https://google.com",
     svg: true,
     icons: ["nuxt", "node", "postgres"],
+    iconLinks: ["https://nuxtjs.org/", "https://nodejs.org/en/", "https://www.postgresql.org/"],
   },
   {
     coverImg: "https://imgur.com/WNmG3Q6.jpg",
@@ -32,6 +34,7 @@ export const portfolios = [
     view: "https://google.com",
     svg: true,
     icons: ["next", "node", "mongo"],
+    iconLinks: ["https://nextjs.org/", "https://nodejs.org/en/", "https://www.mongodb.com/"],
   },
   {
     coverImg: "https://imgur.com/WNmG3Q6.jpg",
@@ -43,5 +46,6 @@ export const portfolios = [
     view: "https://google.com",
     svg: true,
     icons: ["nuxt", "node", "postgres"],
+    iconLinks: ["https://nuxtjs.org/", "https://nodejs.org/en/", "https://www.postgresql.org/"],
   },
 ]
