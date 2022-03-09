@@ -1,8 +1,18 @@
 <template>
   <div :class="['customSteps', light ? 'light' : '']">
     <FormulateForm v-model="formValues" @submit="submitHandler" autocomplete="off">
-      <b-progress :value="((activeStep + 1) / totalSteps) * 100" :type="light ? 'is-info' : 'is-primary'" size="is-small"></b-progress>
-      <b-steps v-model="activeStep" :animated="true" :has-navigation="true" mobile-mode="minimalist" class="customSteps__steps">
+      <b-progress
+        :value="((activeStep + 1) / totalSteps) * 100"
+        :type="light ? 'is-info' : 'is-primary'"
+        size="is-small"
+      ></b-progress>
+      <b-steps
+        v-model="activeStep"
+        :animated="true"
+        :has-navigation="true"
+        mobile-mode="minimalist"
+        class="customSteps__steps"
+      >
         <b-step-item step="1">
           <FormulateInput
             type="select"
@@ -59,7 +69,10 @@
                 value: 'conversions',
                 label: `Conversions - I think I'm losing out on valuable users`,
               },
-              { value: 'awareness', label: `Awareness - I need reach visitors in an immersive fashion` },
+              {
+                value: 'awareness',
+                label: `Awareness - I need reach visitors in an immersive fashion`,
+              },
             ]"
             type="checkbox"
             validation="required"
@@ -220,7 +233,7 @@ export default {
     grid-column: center-start/center-end;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 3rem;
+    column-gap: 30px;
 
     & .step-content {
       grid-column: 1 / -1;
@@ -241,7 +254,7 @@ export default {
 
   & .b-steps .steps + .step-content {
     padding: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 20px;
   }
 
   &.light {
