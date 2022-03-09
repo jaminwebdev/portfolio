@@ -2,34 +2,37 @@
   <section class="favStack">
     <div class="favStack__leftColumn">
       <img src="/blue-dotted-square.svg" class="blueDottedSquare" />
-      <nuxt-img src="https://i.imgur.com/n92j5qA.png" class="favStack__devices favStack__devices--desktop" />
-      <nuxt-img src="https://i.imgur.com/M9HNckv.png" class="favStack__devices favStack__devices--mobile" />
+      <nuxt-img
+        src="https://i.imgur.com/n92j5qA.png"
+        class="favStack__devices favStack__devices--desktop"
+      />
+      <nuxt-img
+        src="https://i.imgur.com/M9HNckv.png"
+        class="favStack__devices favStack__devices--mobile"
+      />
     </div>
     <div class="favStack__rightColumn">
       <h2>My Favorite <span class="secondaryHighlight">Stack</span></h2>
-      <p>I love all things JS, however, this stack I'm particularly fond of. In fact, it's what this site is built with.</p>
+      <p>
+        I love all things JS, however, this stack I'm particularly fond of. In fact, it's what this
+        site is built with.
+      </p>
       <div class="favStack__techCards">
-        <div class="favStack__techCard">
-          <div class="favStack__techIcon">
-            <img src="/icons/icon-nuxt.svg" alt="" />
-          </div>
-          <h4>Nuxt</h4>
-          <p>Leveraging the latest front-end technlolgoies like Vue, React, and Angular.</p>
-        </div>
-        <div class="favStack__techCard">
-          <div class="favStack__techIcon">
-            <img src="/icons/icon-node.svg" alt="" />
-          </div>
-          <h4>Node JS</h4>
-          <p>Leveraging the latest front-end technlolgoies like Vue, React, and Angular.</p>
-        </div>
-        <div class="favStack__techCard">
-          <div class="favStack__techIcon">
-            <img src="/icons/icon-postgres.svg" alt="" />
-          </div>
-          <h4>PostgreSQL</h4>
-          <p>Leveraging the latest front-end technlolgoies like Vue, React, and Angular.</p>
-        </div>
+        <TechCard
+          heading="Nuxt"
+          description="Leveraging the latest front-end technlolgoies like Vue, React, and Angular."
+          icon="/icons/icon-nuxt.svg"
+        />
+        <TechCard
+          heading="Node JS"
+          description="Leveraging the latest front-end technlolgoies like Vue, React, and Angular."
+          icon="/icons/icon-node.svg"
+        />
+        <TechCard
+          heading="PostgreSQL"
+          description="Leveraging the latest front-end technlolgoies like Vue, React, and Angular."
+          icon="/icons/icon-postgres.svg"
+        />
       </div>
     </div>
   </section>
@@ -105,41 +108,6 @@ export default {
     display: grid;
     justify-content: center;
     grid-gap: 20px;
-  }
-
-  &__techCard {
-    background: #fff;
-    border-radius: 20px;
-    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
-    padding: 1rem 2rem 1rem 1rem;
-
-    display: grid;
-    column-gap: 15px;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: max-content max-content;
-
-    & h4 {
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin: 10px 0 5px;
-    }
-
-    & p {
-      line-height: 1.3em;
-    }
-  }
-
-  &__techIcon {
-    grid-column: 1/2;
-    grid-row: 1/-1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    & img {
-      width: 60px;
-      height: 60px;
-    }
   }
 }
 </style>
