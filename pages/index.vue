@@ -4,7 +4,7 @@
       <AppHero :type="getTheme">
         <template #leftColumnOfTwo>
           <transition name="fade" mode="out-in">
-            <div v-if="!showForm">
+            <div v-if="!heroForm">
               <h1>
                 Hi, I'm Jamin
                 <br />
@@ -19,7 +19,7 @@
               <b-button
                 size="is-medium"
                 :type="getTheme === 'minimal' ? 'is-primary' : 'is-primary is-light'"
-                @click="showWebsiteForm"
+                @click="showHeroForm"
               >
                 My Portfolio
                 <svg
@@ -94,15 +94,12 @@ export default {
       portfolios,
       featPortfolio,
       technologies,
-      showForm: false,
+      heroForm: false,
     }
   },
   methods: {
-    launchIconModal(icon) {
-      console.log(`Launching the ${icon} modal`)
-    },
-    showWebsiteForm() {
-      this.showForm = true
+    showHeroForm() {
+      this.heroForm = true
     },
   },
   computed: {
