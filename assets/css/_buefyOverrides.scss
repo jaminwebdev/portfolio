@@ -94,7 +94,7 @@ $container-max-width: 1304px;
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
 
-// @import "./buefy-overrides/_button-overrides.sass";
+@import "./buefy-overrides/_button-overrides.sass";
 
 // button icon with svgs
 .button {
