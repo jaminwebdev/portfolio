@@ -1,15 +1,17 @@
 <template>
   <section class="favStack">
     <div class="favStack__leftColumn">
-      <img src="/blue-dotted-square.svg" class="blueDottedSquare" />
-      <nuxt-img
-        src="https://i.imgur.com/n92j5qA.png"
-        class="favStack__devices favStack__devices--desktop"
-      />
-      <nuxt-img
-        src="https://i.imgur.com/M9HNckv.png"
-        class="favStack__devices favStack__devices--mobile"
-      />
+      <LazyLoad>
+        <img src="/blue-dotted-square.svg" class="blueDottedSquare" />
+        <nuxt-img
+          src="https://i.imgur.com/n92j5qA.png"
+          class="favStack__devices favStack__devices--desktop"
+        />
+        <nuxt-img
+          src="https://i.imgur.com/M9HNckv.png"
+          class="favStack__devices favStack__devices--mobile"
+        />
+      </LazyLoad>
     </div>
     <div class="favStack__rightColumn">
       <h2>My Favorite <span class="secondaryHighlight">Stack</span></h2>
@@ -64,7 +66,7 @@ export default {
 
     & .blueDottedSquare {
       position: absolute;
-      z-index: 1;
+      z-index: -1;
       left: -40px;
       top: -30px;
     }

@@ -40,12 +40,14 @@
           </transition>
         </template>
         <template #rightColumnOfTwo>
-          <img
-            src="/avatars/smiling-waving.svg"
-            alt="Avatar of me smiling & waiving"
-            id="headerAvatar"
-          />
-          <nuxt-img id="laptopMockup" src="/leaning-laptop.png" />
+          <LazyLoad>
+            <img
+              src="/avatars/smiling-waving.svg"
+              alt="Avatar of me smiling & waiving"
+              id="headerAvatar"
+            />
+            <nuxt-img id="laptopMockup" src="/leaning-laptop.png" />
+          </LazyLoad>
         </template>
         <template #svgSeparatorBottom>
           <SvgSeparator
@@ -155,7 +157,7 @@ export default {
 
         & #headerAvatar {
           top: initial;
-          bottom: -250px;
+          bottom: -270px;
           right: -320px;
           z-index: 25;
           transform: rotateZ(-20deg) rotateY(180deg) scale(0.7);
