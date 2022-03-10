@@ -1,6 +1,6 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: "static",
+  target: "server",
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -25,7 +25,14 @@ export default {
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: {
-    dirs: ["~/components", "~/components/layout", "~/components/cards", "~/components/forms", "~components/tabs", "~components/sections"],
+    dirs: [
+      "~/components",
+      "~/components/layout",
+      "~/components/cards",
+      "~/components/forms",
+      "~components/tabs",
+      "~components/sections",
+    ],
   },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
