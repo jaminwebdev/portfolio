@@ -37,7 +37,16 @@ export default {
   },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ["@nuxtjs/google-fonts", "@braid/vue-formulate/nuxt"],
+  buildModules: [
+    "@nuxtjs/google-fonts",
+    "@braid/vue-formulate/nuxt",
+    [
+      "@nuxt/image",
+      {
+        provider: "static",
+      },
+    ],
+  ],
 
   // Google Fonts
   googleFonts: {
