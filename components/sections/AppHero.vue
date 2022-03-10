@@ -31,11 +31,32 @@ export default {
   position: relative;
   overflow: hidden;
 
+  display: grid;
+  grid-template-columns: var(--default-two-columns-half);
+  justify-items: center;
+
   &.slanted,
   &.rounded {
     background-image: url("static/Main Background Vector.svg");
     background-size: cover;
     background-position: center center;
+  }
+
+  & .leftColumnOfTwo {
+    grid-column: left-start/left-end;
+    width: 100%;
+
+    @media only screen and (max-width: variables.$bp-medium) {
+      grid-column: left-start/right-end;
+    }
+  }
+
+  & .rightColumnOfTwo {
+    grid-column: right-start/right-end;
+
+    @media only screen and (max-width: variables.$bp-medium) {
+      grid-column: left-start/right-end;
+    }
   }
 
   & h1 {
@@ -48,19 +69,12 @@ export default {
   }
 
   &.slanted {
-    display: grid;
-    grid-template-columns: var(--default-two-columns-half);
-    align-items: center;
-    justify-items: center;
-
     & .leftColumnOfTwo {
-      grid-column: left-start/left-end;
       z-index: 50;
       padding-right: 3%;
 
       @media only screen and (max-width: variables.$bp-medium) {
         padding-right: 0;
-        grid-column: left-start/right-end;
 
         display: grid;
         grid-gap: 1.5rem;
@@ -72,33 +86,22 @@ export default {
     }
 
     & .rightColumnOfTwo {
-      grid-column: right-start/right-end;
       z-index: 100;
       position: relative;
-
-      @media only screen and (max-width: variables.$bp-medium) {
-        grid-column: left-start/right-end;
-      }
     }
   }
 
   &.rounded {
     border-radius: 0 0 3rem 3rem;
-    display: grid;
-    grid-template-columns: var(--default-two-columns-half);
-    align-items: center;
-    justify-items: center;
 
     @media only screen and (max-width: variables.$bp-medium) {
       grid-auto-rows: min-content;
     }
 
     & .leftColumnOfTwo {
-      grid-column: left-start/left-end;
       padding-right: 5%;
 
       @media only screen and (max-width: variables.$bp-medium) {
-        grid-column: left-start/right-end;
         grid-row: 1/2;
         padding-right: 0px;
 
@@ -112,33 +115,20 @@ export default {
     }
 
     & .rightColumnOfTwo {
-      grid-column: right-start/right-end;
       z-index: 100;
       position: relative;
-
-      @media only screen and (max-width: variables.$bp-medium) {
-        grid-column: left-start/right-end;
-      }
     }
   }
 
   &.minimal {
     background: #edf2f7;
 
-    display: grid;
-    grid-template-columns: var(--default-two-columns-half);
-    align-items: center;
-    justify-items: center;
-
     & .leftColumnOfTwo {
-      grid-column: left-start/left-end;
       z-index: 50;
       padding-right: 3%;
 
       @media only screen and (max-width: variables.$bp-medium) {
         padding-right: 0;
-        grid-column: left-start/right-end;
-
         display: grid;
         grid-gap: 1.5rem;
 
@@ -149,23 +139,14 @@ export default {
     }
 
     & .rightColumnOfTwo {
-      grid-column: right-start/right-end;
       z-index: 100;
       position: relative;
-
-      @media only screen and (max-width: variables.$bp-medium) {
-        grid-column: left-start/right-end;
-      }
     }
 
     & h1,
     & p {
       color: var(--primary-font-color);
     }
-  }
-
-  .leftColumnOfTwo {
-    width: 100%;
   }
 }
 </style>
