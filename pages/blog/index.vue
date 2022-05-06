@@ -196,7 +196,7 @@ export default {
   }
 
   &__body {
-    background: #edf2f7;
+    background: var(--secondary-page-background);
     padding: 100px 0;
     grid-column: 2 / span 2;
     z-index: 10;

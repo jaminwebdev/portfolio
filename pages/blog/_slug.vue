@@ -59,7 +59,7 @@ export default {
       450px
     )
     [right-end] minmax(20px, 1fr) [full-end];
-  background-color: #edf2f7;
+  background-color: var(--secondary-page-background);
 
   &__header {
     grid-column: full-start/full-end;

@@ -1,6 +1,12 @@
 <template>
   <section :class="['services', type]">
-    <SvgSeparator type="tilt" fill="var(--primary-page-background)" custHeight="100px" class="top" v-if="type === 'slanted'"></SvgSeparator>
+    <SvgSeparator
+      type="tilt"
+      fill="var(--primary-page-background)"
+      custHeight="100px"
+      class="top"
+      v-if="type === 'slanted'"
+    ></SvgSeparator>
     <MyServiceTabs class="services__tabs" :light="type !== 'minimal'"></MyServiceTabs>
     <SvgSeparator
       type="tilt"
@@ -51,7 +57,7 @@ export default {
 
   &.minimal {
     padding: 150px 0;
-    background: #edf2f7;
+    background: var(--secondary-page-background);
 
     display: grid;
     grid-template-columns: var(--default-full-layout-grid);

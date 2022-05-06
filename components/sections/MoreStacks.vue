@@ -107,7 +107,7 @@ export default {
 }
 
 .minimal {
-  background: #edf2f7;
+  background: var(--secondary-page-background);
   display: grid;
   grid-template-columns: var(--default-full-layout-grid);
   padding: 150px 0;

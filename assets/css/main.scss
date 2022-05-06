@@ -8,6 +8,10 @@
 
 html {
   box-sizing: border-box;
+}
+
+body,
+main {
   background: var(--primary-page-background);
 }
 
@@ -29,9 +33,9 @@ html {
   --primary-color-dark-rgb: 12, 71, 140;
 
   --primary-page-background: #fafaff;
+  --secondary-page-background: #edf2f7;
 
   --primary-font-color: #2f495e;
-
   --secondary-color: #28c4ac;
   --secondary-color-rgb: 40, 196, 172;
   --secondary-color-light: hsl(171, 66%, 84%);

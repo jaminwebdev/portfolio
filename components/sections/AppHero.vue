@@ -121,7 +121,7 @@ export default {
   }
 
   &.minimal {
-    background: #edf2f7;
+    background: var(--secondary-page-background);
 
     & .leftColumnOfTwo {
       z-index: 50;

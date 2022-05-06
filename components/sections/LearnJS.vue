@@ -72,7 +72,7 @@ export default {
     grid-column: full-start/full-end;
     padding: 175px 0;
     position: relative;
-    background: #edf2f7;
+    background: var(--secondary-page-background);
 
     display: grid;
     grid-template-columns: var(--default-two-columns-half);
