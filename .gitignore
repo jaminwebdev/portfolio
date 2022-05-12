@@ -91,3 +91,6 @@ sw.*
 
 # todos js helper
 todos.js
+
+# vercel json for ssr deployment
+./vercel.json
