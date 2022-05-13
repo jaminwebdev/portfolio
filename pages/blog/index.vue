@@ -129,7 +129,6 @@ export default {
     name: "fade",
     mode: "out-in",
   },
-  layout: "noTheme",
   data() {
     return {
       searchTerm: "",

@@ -1,10 +1,10 @@
 <template>
-  <section :class="['portfolio', type, 'myContainer']">
+  <section class="portfolio myContainer">
     <h2 class="portfolio__heading">My <span class="secondaryHighlight">Portfolio</span></h2>
     <OverlapCard
       class="portfolio__featPortfolio desktopVisible"
       :bgImg="featPortfolio.coverImg"
-      :borderRadius="getTheme !== 'default'"
+      borderRadius
     >
       <template #icons>
         <BaseIcon
@@ -43,7 +43,7 @@
       </template>
     </OverlapCard>
     <AppCard
-      :type="getThemeCards"
+      type="rounded"
       id="latestProject"
       :bgImg="featPortfolio.coverImg"
       class="portfolio__featPortfolio mobileVisible"
@@ -74,7 +74,7 @@
         <a href="github.com" target="_blank">
           <svg
             viewBox="0 0 30 30"
-            :fill="getTheme === 'default' ? '#444' : '#fff'"
+            fill="var(--primary-text-color)"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -120,7 +120,7 @@
     </AppCard>
     <div class="portfolio__cardContainer">
       <div v-for="portfolio in portfolios" :key="portfolio.heading">
-        <AppCard :type="getThemeCards" :bgImg="portfolio.coverImg">
+        <AppCard type="rounded" :bgImg="portfolio.coverImg">
           <template #img>
             <nuxt-img :src="portfolio.coverImg" />
             <svg-separator
@@ -202,9 +202,6 @@ import { mapGetters } from "vuex"
 
 export default {
   props: ["portfolios", "featPortfolio", "type"],
-  computed: {
-    ...mapGetters("theme", ["getTheme", "getThemeCards"]),
-  },
 }
 </script>
 

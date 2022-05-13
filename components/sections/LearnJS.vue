@@ -1,11 +1,10 @@
 <template>
-  <section :class="[type, 'learn']">
+  <section class="learn">
     <SvgSeparator
       type="tilt"
       fill="var(--primary-page-background)"
       custHeight="100px"
       class="top"
-      v-if="type === 'slanted'"
     ></SvgSeparator>
     <div class="leftColumnOfTwo">
       <h2 class="moreTech__heading">
@@ -21,12 +20,7 @@
         Best of all, most of this list is 100% free. I’ve only included affordable online courses
         because I think they’re worth more than the $10 it costs to take them.
       </p>
-      <b-button
-        size="is-medium"
-        tag="router-link"
-        to="/"
-        :type="type === 'minimal' ? 'is-primary' : 'is-primary is-light'"
-      >
+      <b-button size="is-medium" tag="router-link" to="/" type="is-primary">
         Start Learning!
         <svg
           class="icon-right"
@@ -53,197 +47,70 @@
       fill="var(--primary-page-background)"
       custHeight="100px"
       class="bottom tiltDownRight"
-      v-if="type === 'slanted'"
     ></SvgSeparator>
   </section>
 </template>
 
 <script>
-export default {
-  props: ["type"],
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>
 @use "@/assets/css/_variables.scss";
 
 .learn {
-  &.minimal {
-    grid-column: full-start/full-end;
-    padding: 175px 0;
-    position: relative;
-    background: var(--secondary-page-background);
+  grid-column: full-start/full-end;
+  padding: 175px 0;
+  position: relative;
+  background: var(--secondary-page-background);
 
-    display: grid;
-    grid-template-columns: var(--default-two-columns-half);
-    align-items: center;
+  display: grid;
+  grid-template-columns: var(--default-two-columns-half);
+  align-items: center;
 
-    @media only screen and (max-width: variables.$bp-medium) {
-      grid-auto-rows: min-content;
-      padding: 150px 10px;
-    }
+  @media only screen and (max-width: variables.$bp-medium) {
+    grid-auto-rows: min-content;
+    padding: 150px 10px;
+  }
 
-    & .leftColumnOfTwo {
-      grid-column: left-start/left-end;
-      padding: 0 75px 0 0;
+  & .leftColumnOfTwo {
+    grid-column: left-start/left-end;
+    padding: 0 75px 0 0;
 
-      & h2,
-      & p {
-        margin-bottom: 35px;
-      }
-    }
-
-    & .rightColumnOfTwo {
-      grid-column: right-start / right-end;
-      display: grid;
-      align-items: center;
-      justify-items: center;
-
-      @media only screen and (max-width: variables.$bp-medium) {
-        grid-row: 1/2;
-        margin-bottom: 50px;
-      }
-    }
-
-    & .leftColumnOfTwo,
-    & .rightColumnOfTwo {
-      @media only screen and (max-width: variables.$bp-medium) {
-        grid-column: left-start / right-end;
-        padding: 0;
-
-        display: grid;
-        justify-items: center;
-      }
-    }
-
-    &__avatar {
-      max-width: 350px;
-
-      @media only screen and (max-width: variables.$bp-medium) {
-        max-width: 250px;
-      }
+    & h2,
+    & p {
+      margin-bottom: 35px;
     }
   }
 
-  &.slanted {
-    grid-column: full-start/full-end;
-    padding: 175px 0;
-
-    background: url("/Main Background Vector.svg");
-    background-size: cover;
-    background-position: center center;
-    position: relative;
-
+  & .rightColumnOfTwo {
+    grid-column: right-start / right-end;
     display: grid;
-    grid-template-columns: var(--default-two-columns-half);
     align-items: center;
+    justify-items: center;
 
     @media only screen and (max-width: variables.$bp-medium) {
-      grid-auto-rows: min-content;
-    }
-
-    & .leftColumnOfTwo {
-      grid-column: left-start/left-end;
-      padding: 0 75px 0 0;
-
-      & h2,
-      & p {
-        color: #fafaff;
-        margin-bottom: 35px;
-      }
-    }
-
-    & .rightColumnOfTwo {
-      grid-column: right-start / right-end;
-      display: grid;
-      align-items: center;
-      justify-items: center;
-
-      @media only screen and (max-width: variables.$bp-medium) {
-        grid-row: 1/2;
-        margin-bottom: 50px;
-      }
-    }
-
-    & .leftColumnOfTwo,
-    & .rightColumnOfTwo {
-      @media only screen and (max-width: variables.$bp-medium) {
-        grid-column: left-start / right-end;
-        padding: 0;
-
-        display: grid;
-        justify-items: center;
-      }
-    }
-
-    &__avatar {
-      max-width: 350px;
-
-      @media only screen and (max-width: variables.$bp-medium) {
-        max-width: 250px;
-      }
+      grid-row: 1/2;
+      margin-bottom: 50px;
     }
   }
 
-  &.rounded {
-    grid-column: center-start/center-end;
-    padding: 60px 25px;
+  & .leftColumnOfTwo,
+  & .rightColumnOfTwo {
+    @media only screen and (max-width: variables.$bp-medium) {
+      grid-column: left-start / right-end;
+      padding: 0;
 
-    background: url("/Main Background Vector.svg");
-    background-size: cover;
-    background-position: center center;
-    position: relative;
+      display: grid;
+      justify-items: center;
+    }
+  }
 
-    display: grid;
-    grid-template-columns: var(--default-two-columns-half);
-    align-items: center;
-
-    border-radius: 30px;
+  &__avatar {
+    max-width: 350px;
 
     @media only screen and (max-width: variables.$bp-medium) {
-      padding: 60px 0rem;
-      grid-column: full-start/full-end;
-    }
-
-    & .leftColumnOfTwo {
-      grid-column: left-start/left-end;
-      padding: 0 45px 0 0;
-
-      & h2,
-      & p {
-        color: #fafaff;
-        margin-bottom: 35px;
-      }
-    }
-
-    & .rightColumnOfTwo {
-      grid-column: right-start / right-end;
-      display: grid;
-      align-items: center;
-      justify-items: center;
-
-      @media only screen and (max-width: variables.$bp-medium) {
-        grid-row: 1/2;
-        margin-bottom: 50px;
-      }
-    }
-
-    & .leftColumnOfTwo,
-    & .rightColumnOfTwo {
-      @media only screen and (max-width: variables.$bp-medium) {
-        grid-column: left-start / right-end;
-        padding: 0;
-        display: grid;
-        justify-items: center;
-      }
-    }
-
-    &__avatar {
-      max-width: 350px;
-
-      @media only screen and (max-width: variables.$bp-medium) {
-        max-width: 250px;
-      }
+      max-width: 250px;
     }
   }
 }

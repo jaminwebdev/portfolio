@@ -78,7 +78,7 @@
         <Navigation
           class="app__layoutNav"
           @toggleMobileMenu="toggleMobileMenu"
-          :type="getTheme"
+          type="minimal"
         ></Navigation>
         <Nuxt class="app__layoutMain" />
         <Footer class="app__layoutFooter"></Footer>
@@ -104,7 +104,6 @@ export default {
   },
   computed: {
     ...mapState("theme", ["viewFade"]),
-    ...mapGetters("theme", ["getTheme"]),
     isMobileNavOpen() {
       return this.mobileOpen
     },

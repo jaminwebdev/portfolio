@@ -1,7 +1,7 @@
 <template>
-  <div :class="[getTheme, 'homeContainer']">
+  <div class="homeContainer">
     <transition name="fade-delay" appear>
-      <AppHero :type="getTheme">
+      <AppHero type="minimal">
         <template #leftColumnOfTwo>
           <transition name="fade" mode="out-in">
             <div v-if="!heroForm">
@@ -16,11 +16,7 @@
                 I build websites and applications while leveraging blazingly fast tools and
                 frameworks like Vue & Nuxt JS, React & Next JS, Angular, and Node.
               </p>
-              <b-button
-                size="is-medium"
-                :type="getTheme === 'minimal' ? 'is-primary' : 'is-primary is-light'"
-                @click="showHeroForm"
-              >
+              <b-button size="is-medium" type="is-primary" @click="showHeroForm">
                 My Portfolio
                 <svg
                   viewBox="0 0 30 37"
@@ -36,7 +32,7 @@
                 </svg>
               </b-button>
             </div>
-            <WebsiteQuestionnaire v-else :light="getTheme !== 'minimal'"> </WebsiteQuestionnaire>
+            <WebsiteQuestionnaire v-else light> </WebsiteQuestionnaire>
           </transition>
         </template>
         <template #rightColumnOfTwo>
@@ -53,19 +49,19 @@
           <SvgSeparator
             type="tilt"
             fill="var(--primary-page-background)"
-            custHeight="125px"
+            custHeight="175px"
             class="bottom tiltDownLeft"
           ></SvgSeparator>
         </template>
       </AppHero>
     </transition>
     <main>
-      <Portfolio :portfolios="portfolios" :featPortfolio="featPortfolio" :type="getTheme" />
-      <Services :type="getTheme" />
-      <FavStack :type="getTheme" />
-      <MoreStacks :type="getTheme" />
-      <OtherTech :type="getTheme" :technologies="technologies" />
-      <LearnJS :type="getTheme" />
+      <Portfolio :portfolios="portfolios" :featPortfolio="featPortfolio" />
+      <Services />
+      <FavStack />
+      <MoreStacks />
+      <OtherTech :technologies="technologies" />
+      <LearnJS />
       <CTARow>
         <template #leftColumnOfTwo>
           <h2>Let’s Chat</h2>
@@ -89,7 +85,6 @@
 <script>
 import { portfolios, featPortfolio } from "../helpers/portfolio"
 import { technologies } from "../helpers/otherTech"
-import { mapGetters } from "vuex"
 export default {
   data() {
     return {
@@ -104,14 +99,6 @@ export default {
       this.heroForm = true
     },
   },
-  computed: {
-    ...mapGetters("theme", [
-      "getTheme",
-      "getThemeBorderRadius",
-      "getThemeCards",
-      "getThemeStackCards",
-    ]),
-  },
 }
 </script>
 
@@ -120,79 +107,10 @@ export default {
 .homeContainer {
   overflow-x: hidden;
 
-  &.minimal {
-    & .heroContainer {
-      padding: 200px 0 150px;
-
-      @media only screen and (max-width: variables.$bp-medium) {
-        padding: 150px 10px 120px;
-        min-height: 600px;
-
-        & .rightColumnOfTwo {
-          z-index: 25;
-
-          & #headerAvatar {
-            top: initial;
-            bottom: -300px;
-            right: -320px;
-            z-index: 25;
-            transform: rotateZ(-20deg) rotateY(180deg) scale(0.7);
-          }
-        }
-      }
-    }
-  }
-
-  &.slanted {
-    & .heroContainer {
-      padding: 200px 0 150px;
-
-      @media only screen and (max-width: variables.$bp-medium) {
-        padding-top: 150px;
-        min-height: 700px;
-
-        & .rightColumnOfTwo {
-          z-index: 25;
-        }
-
-        & #headerAvatar {
-          top: initial;
-          bottom: -270px;
-          right: -320px;
-          z-index: 25;
-          transform: rotateZ(-20deg) rotateY(180deg) scale(0.7);
-        }
-
-        & .svgContainer.bottom {
-          z-index: 30;
-
-          & svg {
-            height: 7.5rem !important;
-          }
-        }
-      }
-    }
-  }
-
-  &.rounded {
-    & .heroContainer {
-      padding: 150px 0 75px;
-
-      @media only screen and (max-width: variables.$bp-medium) {
-        padding: 150px 0 100px;
-
-        & #headerAvatar {
-          top: initial;
-          bottom: -275px;
-          right: -320px;
-          transform: rotateZ(-20deg) rotateY(180deg) scale(0.7);
-        }
-      }
-    }
-  }
-
   // -- section styles independent of theme --
   & .heroContainer {
+    padding: 200px 0 50px;
+
     & #headerAvatar {
       position: absolute;
       top: 0;
@@ -214,6 +132,23 @@ export default {
     & #laptopMockup {
       @media only screen and (max-width: variables.$bp-medium) {
         display: none;
+      }
+    }
+
+    @media only screen and (max-width: variables.$bp-medium) {
+      padding: 150px 10px 120px;
+      min-height: 600px;
+
+      & .rightColumnOfTwo {
+        z-index: 25;
+
+        & #headerAvatar {
+          top: initial;
+          bottom: -300px;
+          right: -145px;
+          z-index: 100;
+          transform: rotateZ(-20deg) rotateY(180deg) scale(0.7);
+        }
       }
     }
   }

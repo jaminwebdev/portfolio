@@ -9,19 +9,6 @@
         </svg>
       </div>
       <h4>Don't like this layout?</h4>
-      <label for="theme picker" class="theme__selectLabel">
-        Try another
-        <select
-          name="theme picker"
-          id="themePicker"
-          class="theme__select"
-          @change="onSelectChange($event)"
-        >
-          <option value="minimal">Minimal</option>
-          <option value="rounded">Rounded</option>
-          <option value="slanted">Slanted</option>
-        </select>
-      </label>
       <button @click="onColorModeChange">Change mode</button>
     </div>
     <div class="theme__drawerToggle" @click="toggleDrawer" v-if="!open">
@@ -46,16 +33,9 @@ export default {
     ...mapGetters("theme", ["getColorMode"]),
   },
   methods: {
-    ...mapActions("theme", ["setFade", "changeTheme", "changeColorMode"]),
+    ...mapActions("theme", ["setFade", "changeColorMode"]),
     toggleDrawer() {
       this.open = !this.open
-    },
-    onSelectChange($event) {
-      this.setFade(true)
-      setTimeout(() => {
-        this.changeTheme($event.target.value)
-        this.setFade(false)
-      }, 200)
     },
     onColorModeChange() {
       const colorState = this.getColorMode

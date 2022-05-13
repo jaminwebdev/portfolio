@@ -34,7 +34,6 @@ export default {
       featuredImg,
     }
   },
-  layout: "noTheme",
   computed: {
     formatDate() {
       const options = { year: "numeric", month: "long", day: "numeric" }

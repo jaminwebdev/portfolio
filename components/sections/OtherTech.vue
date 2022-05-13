@@ -1,5 +1,5 @@
 <template>
-  <section :class="['otherTech', type, 'myContainer']">
+  <section class="otherTech myContainer">
     <div class="leftColumnOfTwo">
       <h2 class="otherTech__heading">
         What Else <br />
@@ -27,17 +27,17 @@
 
 <script>
 export default {
-  props: ["technologies", "type"],
+  props: ["technologies"],
 }
 </script>
 
 <style lang="scss" scoped>
 @use "@/assets/css/_variables.scss";
 .otherTech {
-  padding: 135px 20px;
+  padding: 200px 0;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
+  grid-template-columns: var(--default-two-columns-half);
   align-items: center;
 
   @media only screen and (max-width: 1000px) {
@@ -45,18 +45,12 @@ export default {
     padding: 75px 0;
   }
 
-  & .leftColumnOfTwo,
-  & .rightColumnOfTwo {
-    @media only screen and (max-width: variables.$bp-small) {
-      grid-column: 1/-1;
-    }
-  }
-
   & .leftColumnOfTwo {
+    grid-column: left-start/left-end;
     padding: 0 75px 0 0;
 
     & h2 {
-      margin-bottom: 25px;
+      margin-bottom: 35px;
     }
 
     @media only screen and (max-width: variables.$bp-small) {
@@ -67,6 +61,8 @@ export default {
 
   & .rightColumnOfTwo {
     display: grid;
+    grid-column: right-start / right-end;
+    row-gap: 40px;
     align-items: center;
     justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -77,51 +73,16 @@ export default {
     }
   }
 
-  &.minimal {
-    padding: 200px 0;
-
-    display: grid;
-    grid-template-columns: var(--default-two-columns-half);
-
-    & .leftColumnOfTwo {
-      grid-column: left-start/left-end;
-      padding: 0 75px 0 0;
-
-      & h2 {
-        margin-bottom: 35px;
-      }
-    }
-
-    & .rightColumnOfTwo {
-      grid-column: right-start / right-end;
-      row-gap: 40px;
-    }
-
-    & .leftColumnOfTwo,
-    & .rightColumnOfTwo {
-      @media only screen and (max-width: variables.$bp-medium) {
-        grid-column: left-start / right-end;
-        padding: 0;
-      }
-    }
-
-    @media only screen and (max-width: variables.$bp-small) {
-      padding: 120px 10px;
+  & .leftColumnOfTwo,
+  & .rightColumnOfTwo {
+    @media only screen and (max-width: variables.$bp-medium) {
+      grid-column: left-start / right-end;
+      padding: 0;
     }
   }
 
-  &.slanted {
-    @media only screen and (max-width: variables.$bp-small) {
-      padding: 100px 10px;
-    }
-  }
-
-  &.rounded {
-    padding: 200px 35px;
-
-    @media only screen and (max-width: variables.$bp-small) {
-      padding: 120px 10px;
-    }
+  @media only screen and (max-width: variables.$bp-small) {
+    padding: 120px 10px;
   }
 }
 </style>

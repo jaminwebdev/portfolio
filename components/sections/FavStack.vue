@@ -41,9 +41,7 @@
 </template>
 
 <script>
-export default {
-  props: ["type"],
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>

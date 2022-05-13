@@ -79,14 +79,6 @@ export default {
         }
       }
 
-      if (this.type === "bordered") {
-        styles = {
-          background: this.bgColor,
-          border: `${this.borderWidth} solid ${this.borderColor}`,
-          borderRadius: this.borderRadius,
-        }
-      }
-
       if (this.type === "bgVector") {
         styles = {
           borderRadius: this.borderRadius,
@@ -429,7 +421,9 @@ export default {
 
 .borderedCard {
   display: grid;
-  padding: 60px 40px;
+  padding: 60px;
+  background: var(--primary-page-background);
+  border-radius: 10px;
 
   &__imgContainer,
   &__tagLink {
@@ -442,10 +436,6 @@ export default {
     justify-content: center;
     grid-template-columns: repeat(3, min-content);
     z-index: 20;
-
-    &:not(:empty) {
-      margin-bottom: 25px;
-    }
   }
 
   &__contentContainer {
