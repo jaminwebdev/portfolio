@@ -75,11 +75,7 @@
     </div>
     <div :class="[isMobileNavOpen ? 'app__mobileOpen' : '']">
       <div class="app__layout">
-        <Navigation
-          class="app__layoutNav"
-          @toggleMobileMenu="toggleMobileMenu"
-          type="minimal"
-        ></Navigation>
+        <Navigation class="app__layoutNav" @toggleMobileMenu="toggleMobileMenu"></Navigation>
         <Nuxt class="app__layoutMain" />
         <Footer class="app__layoutFooter"></Footer>
         <ThemeControls></ThemeControls>
@@ -89,7 +85,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from "vuex"
+import { mapState } from "vuex"
 
 export default {
   data() {

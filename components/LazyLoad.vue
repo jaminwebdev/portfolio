@@ -58,7 +58,6 @@ export default {
       })
     },
     visibilityChanged(isVisible) {
-      console.log("running")
       this.isVisible = isVisible
     },
   },
