@@ -28,7 +28,7 @@ export default {
   props: {
     threshold: {
       type: Number,
-      default: 0.9,
+      default: 0.6,
     },
     delay: {
       type: Number,
