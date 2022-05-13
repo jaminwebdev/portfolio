@@ -36,7 +36,7 @@
           </transition>
         </template>
         <template #rightColumnOfTwo>
-          <LazyLoad>
+          <LazyLoad :delay="0">
             <img
               src="/avatars/smiling-waving.svg"
               alt="Avatar of me smiling & waiving"
