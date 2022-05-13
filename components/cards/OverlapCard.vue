@@ -83,7 +83,7 @@ export default {
   &__card {
     grid-row: 2/3;
     grid-column: 3/-1;
-    background: #fff;
+    background: var(--secondary-page-background);
     padding: 30px 40px;
     box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.08);
     position: relative;

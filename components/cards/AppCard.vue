@@ -106,8 +106,8 @@ export default {
 @use "@/assets/css/_variables.scss";
 .appCard {
   overflow: hidden;
-  box-shadow: 0px 10px 20px rgba(37, 61, 126, 0.1);
-  background: #fff;
+  box-shadow: 0px 10px 20px rgba(37, 61, 126, 0.08);
+  background: var(--secondary-page-background);
 
   display: grid;
   position: relative;
@@ -305,12 +305,12 @@ export default {
       margin: 12px;
 
       & ~ .roundedCard__contentContainer {
-        padding: 15px 30px 30px;
+        padding: 15px 20px 30px;
       }
     }
 
     & img {
-      border-radius: 15px;
+      border-radius: 10px;
       position: relative;
       width: 100%;
       height: 100%;
@@ -363,7 +363,7 @@ export default {
     row-gap: 15px;
     align-content: space-around;
     grid-template-columns: repeat(2, 1fr);
-    background: #fff;
+    background: var(--secondary-page-background);
   }
 
   & p {

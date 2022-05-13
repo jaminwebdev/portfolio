@@ -1,5 +1,6 @@
 export const state = () => ({
   theme: "minimal",
+  colorMode: "light",
   viewFade: false,
 })
 
@@ -10,25 +11,29 @@ export const mutations = {
   SET_VIEWFADE(state, viewFade) {
     state.viewFade = viewFade
   },
+  SET_COLOR_MODE(state, colorMode) {
+    state.colorMode = colorMode
+  },
 }
 
 export const actions = {
   changeTheme({ commit }, theme) {
     commit("SET_THEME", theme)
   },
-  fadeThenChange({ commit, dispatch }, theme) {
-    commit("SET_VIEWFADE", true)
-
-    setTimeout(() => {
-      dispatch("changeTheme", theme)
-      commit("SET_VIEWFADE", false)
-    }, 200)
+  changeColorMode({ commit }, colorMode) {
+    commit("SET_COLOR_MODE", colorMode)
+  },
+  setFade({ commit }, boolean) {
+    commit("SET_VIEWFADE", boolean)
   },
 }
 
 export const getters = {
   getTheme(state) {
     return state.theme
+  },
+  getColorMode(state) {
+    return state.colorMode
   },
   getThemeBorderRadius(state) {
     if (state.theme === "default") {

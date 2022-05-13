@@ -18,7 +18,7 @@ export default {
 @use "@/assets/css/_variables.scss";
 
 .techCard {
-  background: #fff;
+  background: var(--secondary-page-background);
   border-radius: 20px;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
   padding: 1rem 2rem 1rem 1rem;

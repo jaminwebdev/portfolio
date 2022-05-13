@@ -11,12 +11,18 @@
       <h4>Don't like this layout?</h4>
       <label for="theme picker" class="theme__selectLabel">
         Try another
-        <select name="theme picker" id="themePicker" class="theme__select" @change="onSelectChange($event)">
+        <select
+          name="theme picker"
+          id="themePicker"
+          class="theme__select"
+          @change="onSelectChange($event)"
+        >
           <option value="minimal">Minimal</option>
           <option value="rounded">Rounded</option>
           <option value="slanted">Slanted</option>
         </select>
       </label>
+      <button @click="onColorModeChange">Change mode</button>
     </div>
     <div class="theme__drawerToggle" @click="toggleDrawer" v-if="!open">
       <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
@@ -29,20 +35,48 @@
 </template>
 
 <script>
-import { mapActions } from "vuex"
+import { mapActions, mapGetters } from "vuex"
 export default {
   data() {
     return {
       open: false,
     }
   },
+  computed: {
+    ...mapGetters("theme", ["getColorMode"]),
+  },
   methods: {
-    ...mapActions("theme", ["fadeThenChange"]),
+    ...mapActions("theme", ["setFade", "changeTheme", "changeColorMode"]),
     toggleDrawer() {
       this.open = !this.open
     },
     onSelectChange($event) {
-      this.fadeThenChange($event.target.value)
+      this.setFade(true)
+      setTimeout(() => {
+        this.changeTheme($event.target.value)
+        this.setFade(false)
+      }, 200)
+    },
+    onColorModeChange() {
+      const colorState = this.getColorMode
+      const newColorMode = colorState === "light" ? "dark" : "light"
+      this.setFade(true)
+      setTimeout(() => {
+        this.changeColorMode(newColorMode)
+        const docRoot = document.documentElement
+        if (newColorMode === "dark") {
+          docRoot.style.setProperty("--primary-page-background", "#2f495e")
+          docRoot.style.setProperty("--secondary-page-background", "#37546d")
+          docRoot.style.setProperty("--primary-font-color", "#fafaff")
+          docRoot.style.setProperty("--primary-color-dark", "#fafaff")
+        } else {
+          docRoot.style.setProperty("--primary-page-background", "#fafaff")
+          docRoot.style.setProperty("--secondary-page-background", "#edf2f7")
+          docRoot.style.setProperty("--primary-font-color", "#2f495e")
+          docRoot.style.setProperty("--primary-color-dark", "#2f495e")
+        }
+        this.setFade(false)
+      }, 300)
     },
   },
 }

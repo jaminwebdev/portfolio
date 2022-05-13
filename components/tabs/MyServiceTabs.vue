@@ -3,10 +3,15 @@
     <div class="myServiceTabs__btnsContainer">
       <h2>What Do I Do?</h2>
       <p>
-        Over the last 10 years I've had fantastic opportunities to work with dozens of agencies, designers, and SEO experts. Doing so has afforded me
-        to wear a lot of hats. Click below to find out more.
+        Over the last 10 years I've had fantastic opportunities to work with dozens of agencies,
+        designers, and SEO experts. Doing so has afforded me to wear a lot of hats. Click below to
+        find out more.
       </p>
-      <button :class="['myServiceTabs__btnToggle', { active: activeBtn === 'webdev' }]" type="button" @click="changeActiveTab('webdev')">
+      <button
+        :class="['myServiceTabs__btnToggle', { active: activeBtn === 'webdev' }]"
+        type="button"
+        @click="changeActiveTab('webdev')"
+      >
         <div class="myServiceTabs__btnIcon">
           <svg width="40" height="32" viewBox="0 0 40 32" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -30,7 +35,11 @@
           <p>Leveraging the latest front-end technlolgoies like Vue, React, and Angular.</p>
         </div>
       </button>
-      <button :class="['myServiceTabs__btnToggle', { active: activeBtn === 'seo' }]" type="button" @click="changeActiveTab('seo')">
+      <button
+        :class="['myServiceTabs__btnToggle', { active: activeBtn === 'seo' }]"
+        type="button"
+        @click="changeActiveTab('seo')"
+      >
         <div class="myServiceTabs__btnIcon">
           <svg width="35" height="27" viewBox="0 0 35 27" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -50,7 +59,11 @@
           <p>What good is a website if people can't find you?</p>
         </div>
       </button>
-      <button :class="['myServiceTabs__btnToggle', { active: activeBtn === 'design' }]" type="button" @click="changeActiveTab('design')">
+      <button
+        :class="['myServiceTabs__btnToggle', { active: activeBtn === 'design' }]"
+        type="button"
+        @click="changeActiveTab('design')"
+      >
         <div class="myServiceTabs__btnIcon">
           <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -79,16 +92,23 @@
             </div>
           </div>
           <p>
-            Website performance has always been important, but it's only getting more important as search engines, end-users, and business
-            expectations evolve - especially on mobile devices. Your website can't hobble over the finish line and expect to keep up with competitors.
+            Website performance has always been important, but it's only getting more important as
+            search engines, end-users, and business expectations evolve - especially on mobile
+            devices. Your website can't hobble over the finish line and expect to keep up with
+            competitors.
           </p>
           <p>
-            <i>Over half</i> of users abandon sites that take <strong>3 seconds or more</strong> to load. You can't afford to
-            <strong>not</strong> take advantage of Vue or React in your next website project.
+            <i>Over half</i> of users abandon sites that take <strong>3 seconds or more</strong> to
+            load. You can't afford to <strong>not</strong> take advantage of Vue or React in your
+            next website project.
           </p>
           <div class="myServiceTabs__contentBtns">
-            <b-button size="is-medium" :type="light ? 'is-primary is-light' : 'is-primary'"> Web Dev Services</b-button>
-            <b-button size="is-medium" type="is-info is-light" :outlined="light" inverted> My Portfolio </b-button>
+            <b-button size="is-medium" :type="light ? 'is-primary is-light' : 'is-primary'">
+              Web Dev Services</b-button
+            >
+            <b-button size="is-medium" type="is-info is-light" :outlined="light" inverted>
+              My Portfolio
+            </b-button>
           </div>
         </div>
         <div class="myServiceTabs__tabContent" v-show="activeTab === 'seo'" key="seo">
@@ -103,12 +123,15 @@
             </div>
           </div>
           <p>
-            I've been lucky enough to work with dozens of SEO and digital marketing agencies, which has allowed me to pick up all the insider
-            knowledge you need to get ahead. Why would you hire someone else to optimize your site after the fact? Let's launch your site with
+            I've been lucky enough to work with dozens of SEO and digital marketing agencies, which
+            has allowed me to pick up all the insider knowledge you need to get ahead. Why would you
+            hire someone else to optimize your site after the fact? Let's launch your site with
             everything already baked in!
           </p>
           <div class="myServiceTabs__contentBtns">
-            <b-button size="is-medium" :type="light ? 'is-primary is-light' : 'is-primary'"> SEO Services</b-button>
+            <b-button size="is-medium" :type="light ? 'is-primary is-light' : 'is-primary'">
+              SEO Services</b-button
+            >
           </div>
         </div>
         <div class="myServiceTabs__tabContent" v-show="activeTab === 'design'" key="design">
@@ -123,11 +146,14 @@
             </div>
           </div>
           <p>
-            I've also worked with many talented designers and picked up their inspiration resources and design tools. This has lead me down a rabbit
-            hole of UX improvements and given me a research-backed wireframing process that has dramatically increased conversions.
+            I've also worked with many talented designers and picked up their inspiration resources
+            and design tools. This has lead me down a rabbit hole of UX improvements and given me a
+            research-backed wireframing process that has dramatically increased conversions.
           </p>
           <div class="myServiceTabs__contentBtns">
-            <b-button size="is-medium" :type="light ? 'is-primary is-light' : 'is-primary'"> See My Designs</b-button>
+            <b-button size="is-medium" :type="light ? 'is-primary is-light' : 'is-primary'">
+              See My Designs</b-button
+            >
           </div>
         </div>
       </transition-group>
@@ -210,7 +236,7 @@ export default {
     padding: 20px;
     border-radius: 15px;
     border: none;
-    background: #fff;
+    background: var(--primary-page-background);
     box-shadow: 0 0 12px rgba(var(--primary-color-dark-rgb), 0.1);
     transition: all 0.1s ease-out;
 

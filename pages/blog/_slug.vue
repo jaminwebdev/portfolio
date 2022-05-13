@@ -63,7 +63,7 @@ export default {
 
   &__header {
     grid-column: full-start/full-end;
-    background: #fff;
+    background: var(--primary-page-background);
     padding: 200px 0 150px;
     position: relative;
     display: grid;
@@ -130,7 +130,7 @@ export default {
   }
 
   & main {
-    background-color: #fff;
+    background-color: var(--secondary-page-background);
     grid-column: 2 / span 2;
     margin-top: -100px;
     z-index: 10;

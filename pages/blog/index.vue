@@ -162,11 +162,11 @@ export default {
 .blogFeed {
   display: grid;
   grid-template-columns: var(--default-two-columns-half);
-  background-color: #edf2f7;
+  background-color: var(--primary-background-color);
 
   &__header {
     grid-column: full-start/full-end;
-    background: #fff;
+    background: var(--secondary-page-background);
     padding: 200px 0 100px;
     position: relative;
     display: grid;
@@ -196,7 +196,6 @@ export default {
   }
 
   &__body {
-    background: var(--secondary-page-background);
     padding: 100px 0;
     grid-column: 2 / span 2;
     z-index: 10;
