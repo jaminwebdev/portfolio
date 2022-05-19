@@ -32,6 +32,7 @@ export default {
       "~/components/forms",
       "~components/tabs",
       "~components/sections",
+      "~components/sections/home",
     ],
   },
 
