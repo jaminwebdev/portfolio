@@ -73,7 +73,7 @@
         </NuxtLink>
       </div>
     </div>
-    <div :class="[isMobileNavOpen ? 'app__mobileOpen' : '']">
+    <div :class="[mobileOpen ? 'app__mobileOpen' : '']">
       <div class="app__layout">
         <Navigation class="app__layoutNav" @toggleMobileMenu="toggleMobileMenu"></Navigation>
         <Nuxt class="app__layoutMain" />
@@ -100,9 +100,6 @@ export default {
   },
   computed: {
     ...mapState("theme", ["viewFade"]),
-    isMobileNavOpen() {
-      return this.mobileOpen
-    },
   },
   layoutTransition: {
     name: "fade",

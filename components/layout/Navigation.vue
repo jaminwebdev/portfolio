@@ -105,7 +105,7 @@ export default {
     grid-column: 1/2;
 
     display: grid;
-    align-items: center;
+    grid-template-columns: min-content;
 
     & a {
       margin-bottom: 0;
